@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36CA74A029125E4700955CCE /* WhizzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA749F29125E4700955CCE /* WhizzApp.swift */; };
+		36CA74A229125E4700955CCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA74A129125E4700955CCE /* ContentView.swift */; };
+		36CA74A429125E4900955CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CA74A329125E4900955CCE /* Assets.xcassets */; };
+		36CA74A729125E4900955CCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CA74A629125E4900955CCE /* Preview Assets.xcassets */; };
+		36CA74B129125E4A00955CCE /* WhizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA74B029125E4A00955CCE /* WhizzTests.swift */; };
+		36CA74BB29125E4A00955CCE /* WhizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA74BA29125E4A00955CCE /* WhizzUITests.swift */; };
+		36CA74BD29125E4A00955CCE /* WhizzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA74BC29125E4A00955CCE /* WhizzUITestsLaunchTests.swift */; };
+		39AA36F72AB085A4EC5D6693 /* Pods_Whizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232F079369019587C9DCB6C0 /* Pods_Whizz.framework */; };
+		47A7FBEA1443945718DF9A92 /* Pods_Whizz_WhizzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */; };
+		540F230A853A0486B9DC1658 /* Pods_WhizzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36CA74AD29125E4A00955CCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36CA749429125E4700955CCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36CA749B29125E4700955CCE;
+			remoteInfo = Whizz;
+		};
+		36CA74B729125E4A00955CCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36CA749429125E4700955CCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36CA749B29125E4700955CCE;
+			remoteInfo = Whizz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14B63F3F742296FAA06D0EA8 /* Pods-Whizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz.debug.xcconfig"; path = "Target Support Files/Pods-Whizz/Pods-Whizz.debug.xcconfig"; sourceTree = "<group>"; };
+		1BECAB902B8F1DFCC47FA333 /* Pods-Whizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz.release.xcconfig"; path = "Target Support Files/Pods-Whizz/Pods-Whizz.release.xcconfig"; sourceTree = "<group>"; };
+		232F079369019587C9DCB6C0 /* Pods_Whizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB51FD2F9E4083F3465C6DA /* Pods-Whizz-WhizzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		36CA749C29125E4700955CCE /* Whizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CA749F29125E4700955CCE /* WhizzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzApp.swift; sourceTree = "<group>"; };
+		36CA74A129125E4700955CCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		36CA74A329125E4900955CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36CA74A629125E4900955CCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36CA74AC29125E4A00955CCE /* WhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CA74B029125E4A00955CCE /* WhizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzTests.swift; sourceTree = "<group>"; };
+		36CA74B629125E4A00955CCE /* WhizzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhizzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CA74BA29125E4A00955CCE /* WhizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzUITests.swift; sourceTree = "<group>"; };
+		36CA74BC29125E4A00955CCE /* WhizzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.debug.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.debug.xcconfig"; sourceTree = "<group>"; };
+		55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz_WhizzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.release.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.release.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhizzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36CA749929125E4700955CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AA36F72AB085A4EC5D6693 /* Pods_Whizz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CA74A929125E4A00955CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540F230A853A0486B9DC1658 /* Pods_WhizzTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CA74B329125E4A00955CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47A7FBEA1443945718DF9A92 /* Pods_Whizz_WhizzUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20DF4C1D2EAEB7C6EFD6F910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				232F079369019587C9DCB6C0 /* Pods_Whizz.framework */,
+				55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */,
+				E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36CA749329125E4700955CCE = {
+			isa = PBXGroup;
+			children = (
+				36CA749E29125E4700955CCE /* Whizz */,
+				36CA74AF29125E4A00955CCE /* WhizzTests */,
+				36CA74B929125E4A00955CCE /* WhizzUITests */,
+				36CA749D29125E4700955CCE /* Products */,
+				37F290B01D069F80E162815E /* Pods */,
+				20DF4C1D2EAEB7C6EFD6F910 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		36CA749D29125E4700955CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36CA749C29125E4700955CCE /* Whizz.app */,
+				36CA74AC29125E4A00955CCE /* WhizzTests.xctest */,
+				36CA74B629125E4A00955CCE /* WhizzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36CA749E29125E4700955CCE /* Whizz */ = {
+			isa = PBXGroup;
+			children = (
+				36CA749F29125E4700955CCE /* WhizzApp.swift */,
+				36CA74A129125E4700955CCE /* ContentView.swift */,
+				36CA74A329125E4900955CCE /* Assets.xcassets */,
+				36CA74A529125E4900955CCE /* Preview Content */,
+			);
+			path = Whizz;
+			sourceTree = "<group>";
+		};
+		36CA74A529125E4900955CCE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				36CA74A629125E4900955CCE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36CA74AF29125E4A00955CCE /* WhizzTests */ = {
+			isa = PBXGroup;
+			children = (
+				36CA74B029125E4A00955CCE /* WhizzTests.swift */,
+			);
+			path = WhizzTests;
+			sourceTree = "<group>";
+		};
+		36CA74B929125E4A00955CCE /* WhizzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				36CA74BA29125E4A00955CCE /* WhizzUITests.swift */,
+				36CA74BC29125E4A00955CCE /* WhizzUITestsLaunchTests.swift */,
+			);
+			path = WhizzUITests;
+			sourceTree = "<group>";
+		};
+		37F290B01D069F80E162815E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14B63F3F742296FAA06D0EA8 /* Pods-Whizz.debug.xcconfig */,
+				1BECAB902B8F1DFCC47FA333 /* Pods-Whizz.release.xcconfig */,
+				2BB51FD2F9E4083F3465C6DA /* Pods-Whizz-WhizzUITests.debug.xcconfig */,
+				B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */,
+				39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */,
+				CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36CA749B29125E4700955CCE /* Whizz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36CA74C029125E4A00955CCE /* Build configuration list for PBXNativeTarget "Whizz" */;
+			buildPhases = (
+				1F65FD7DC169660C9436F31A /* [CP] Check Pods Manifest.lock */,
+				36CA749829125E4700955CCE /* Sources */,
+				36CA749929125E4700955CCE /* Frameworks */,
+				36CA749A29125E4700955CCE /* Resources */,
+				F15C57A52D129E40B16EE669 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Whizz;
+			productName = Whizz;
+			productReference = 36CA749C29125E4700955CCE /* Whizz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36CA74AB29125E4A00955CCE /* WhizzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36CA74C329125E4A00955CCE /* Build configuration list for PBXNativeTarget "WhizzTests" */;
+			buildPhases = (
+				BD71F3FBACAA800052D3AB25 /* [CP] Check Pods Manifest.lock */,
+				36CA74A829125E4A00955CCE /* Sources */,
+				36CA74A929125E4A00955CCE /* Frameworks */,
+				36CA74AA29125E4A00955CCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36CA74AE29125E4A00955CCE /* PBXTargetDependency */,
+			);
+			name = WhizzTests;
+			productName = WhizzTests;
+			productReference = 36CA74AC29125E4A00955CCE /* WhizzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		36CA74B529125E4A00955CCE /* WhizzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36CA74C629125E4A00955CCE /* Build configuration list for PBXNativeTarget "WhizzUITests" */;
+			buildPhases = (
+				4869299D0EFFFD75BA70F339 /* [CP] Check Pods Manifest.lock */,
+				36CA74B229125E4A00955CCE /* Sources */,
+				36CA74B329125E4A00955CCE /* Frameworks */,
+				36CA74B429125E4A00955CCE /* Resources */,
+				B86E3E27CD20022F2AA2CB32 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36CA74B829125E4A00955CCE /* PBXTargetDependency */,
+			);
+			name = WhizzUITests;
+			productName = WhizzUITests;
+			productReference = 36CA74B629125E4A00955CCE /* WhizzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36CA749429125E4700955CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					36CA749B29125E4700955CCE = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					36CA74AB29125E4A00955CCE = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 36CA749B29125E4700955CCE;
+					};
+					36CA74B529125E4A00955CCE = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 36CA749B29125E4700955CCE;
+					};
+				};
+			};
+			buildConfigurationList = 36CA749729125E4700955CCE /* Build configuration list for PBXProject "Whizz" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36CA749329125E4700955CCE;
+			productRefGroup = 36CA749D29125E4700955CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36CA749B29125E4700955CCE /* Whizz */,
+				36CA74AB29125E4A00955CCE /* WhizzTests */,
+				36CA74B529125E4A00955CCE /* WhizzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36CA749A29125E4700955CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36CA74A729125E4900955CCE /* Preview Assets.xcassets in Resources */,
+				36CA74A429125E4900955CCE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CA74AA29125E4A00955CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CA74B429125E4A00955CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F65FD7DC169660C9436F31A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whizz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4869299D0EFFFD75BA70F339 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whizz-WhizzUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B86E3E27CD20022F2AA2CB32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD71F3FBACAA800052D3AB25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhizzTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F15C57A52D129E40B16EE669 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whizz/Pods-Whizz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whizz/Pods-Whizz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whizz/Pods-Whizz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36CA749829125E4700955CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36CA74A229125E4700955CCE /* ContentView.swift in Sources */,
+				36CA74A029125E4700955CCE /* WhizzApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CA74A829125E4A00955CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36CA74B129125E4A00955CCE /* WhizzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36CA74B229125E4A00955CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36CA74BB29125E4A00955CCE /* WhizzUITests.swift in Sources */,
+				36CA74BD29125E4A00955CCE /* WhizzUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36CA74AE29125E4A00955CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36CA749B29125E4700955CCE /* Whizz */;
+			targetProxy = 36CA74AD29125E4A00955CCE /* PBXContainerItemProxy */;
+		};
+		36CA74B829125E4A00955CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36CA749B29125E4700955CCE /* Whizz */;
+			targetProxy = 36CA74B729125E4A00955CCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		36CA74BE29125E4A00955CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36CA74BF29125E4A00955CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36CA74C129125E4A00955CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B63F3F742296FAA06D0EA8 /* Pods-Whizz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Whizz/Preview Content\"";
+				DEVELOPMENT_TEAM = DQGF5V7WTD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.Whizz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36CA74C229125E4A00955CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BECAB902B8F1DFCC47FA333 /* Pods-Whizz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Whizz/Preview Content\"";
+				DEVELOPMENT_TEAM = DQGF5V7WTD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.Whizz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		36CA74C429125E4A00955CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQGF5V7WTD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.WhizzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whizz.app/Whizz";
+			};
+			name = Debug;
+		};
+		36CA74C529125E4A00955CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQGF5V7WTD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.WhizzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whizz.app/Whizz";
+			};
+			name = Release;
+		};
+		36CA74C729125E4A00955CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB51FD2F9E4083F3465C6DA /* Pods-Whizz-WhizzUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQGF5V7WTD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.WhizzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Whizz;
+			};
+			name = Debug;
+		};
+		36CA74C829125E4A00955CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DQGF5V7WTD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aj.WhizzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Whizz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36CA749729125E4700955CCE /* Build configuration list for PBXProject "Whizz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36CA74BE29125E4A00955CCE /* Debug */,
+				36CA74BF29125E4A00955CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36CA74C029125E4A00955CCE /* Build configuration list for PBXNativeTarget "Whizz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36CA74C129125E4A00955CCE /* Debug */,
+				36CA74C229125E4A00955CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36CA74C329125E4A00955CCE /* Build configuration list for PBXNativeTarget "WhizzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36CA74C429125E4A00955CCE /* Debug */,
+				36CA74C529125E4A00955CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36CA74C629125E4A00955CCE /* Build configuration list for PBXNativeTarget "WhizzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36CA74C729125E4A00955CCE /* Debug */,
+				36CA74C829125E4A00955CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36CA749429125E4700955CCE /* Project object */;
+}
