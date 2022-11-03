@@ -17,6 +17,25 @@
 		39AA36F72AB085A4EC5D6693 /* Pods_Whizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232F079369019587C9DCB6C0 /* Pods_Whizz.framework */; };
 		47A7FBEA1443945718DF9A92 /* Pods_Whizz_WhizzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */; };
 		540F230A853A0486B9DC1658 /* Pods_WhizzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */; };
+		AFA2E0BC291263AA007FD4B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B1291263AA007FD4B1 /* Constants.swift */; };
+		AFA2E0BD291263AA007FD4B1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B7291263AA007FD4B1 /* UIColor+Ext.swift */; };
+		AFA2E0BE291263AA007FD4B1 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B8291263AA007FD4B1 /* DateFormatter+Ext.swift */; };
+		AFA2E0BF291263AA007FD4B1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B9291263AA007FD4B1 /* String+Ext.swift */; };
+		AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B6291263AA007FD4B1 /* UIView+Ext.swift */; };
+		AFA2E0C3291263AA007FD4B1 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0BA291263AA007FD4B1 /* UITextField+Ext.swift */; };
+		AFA2E0C4291263AA007FD4B1 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0BB291263AA007FD4B1 /* UIImageView+Ext.swift */; };
+		AFA2E0C5291263AA007FD4B1 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B0291263AA007FD4B1 /* Enums.swift */; };
+		AFA2E0C7291263AA007FD4B1 /* LocalisationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0AE291263AA007FD4B1 /* LocalisationProvider.swift */; };
+		AFA2E0C8291263AA007FD4B1 /* OpenInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B3291263AA007FD4B1 /* OpenInService.swift */; };
+		AFA2E0C9291263AA007FD4B1 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B2291263AA007FD4B1 /* UserDefaultHelper.swift */; };
+		AFA2E0CA291263AA007FD4B1 /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0AB291263A9007FD4B1 /* CommonMethods.swift */; };
+		AFA2E0CB291263AA007FD4B1 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B5291263AA007FD4B1 /* UIViewController+Ext.swift */; };
+		AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0CE2912646F007FD4B1 /* NetworkManager.swift */; };
+		AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0CF2912646F007FD4B1 /* NetworkService.swift */; };
+		AFA2E0E2291264A4007FD4B1 /* AppChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0DB291264A4007FD4B1 /* AppChannel.swift */; };
+		AFA2E0E5291264A4007FD4B1 /* CompletableDeferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0DE291264A4007FD4B1 /* CompletableDeferred.swift */; };
+		AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0DF291264A4007FD4B1 /* AppActor.swift */; };
+		AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +72,25 @@
 		36CA74BC29125E4A00955CCE /* WhizzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.debug.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.debug.xcconfig"; sourceTree = "<group>"; };
 		55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz_WhizzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA2E0AB291263A9007FD4B1 /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
+		AFA2E0AE291263AA007FD4B1 /* LocalisationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalisationProvider.swift; sourceTree = "<group>"; };
+		AFA2E0B0291263AA007FD4B1 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		AFA2E0B1291263AA007FD4B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AFA2E0B2291263AA007FD4B1 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		AFA2E0B3291263AA007FD4B1 /* OpenInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenInService.swift; sourceTree = "<group>"; };
+		AFA2E0B5291263AA007FD4B1 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0B6291263AA007FD4B1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0B7291263AA007FD4B1 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0B8291263AA007FD4B1 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0B9291263AA007FD4B1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0BA291263AA007FD4B1 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0BB291263AA007FD4B1 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		AFA2E0CE2912646F007FD4B1 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AFA2E0CF2912646F007FD4B1 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AFA2E0DB291264A4007FD4B1 /* AppChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppChannel.swift; sourceTree = "<group>"; };
+		AFA2E0DE291264A4007FD4B1 /* CompletableDeferred.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletableDeferred.swift; sourceTree = "<group>"; };
+		AFA2E0DF291264A4007FD4B1 /* AppActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActor.swift; sourceTree = "<group>"; };
+		AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.release.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.release.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhizzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,9 +159,13 @@
 		36CA749E29125E4700955CCE /* Whizz */ = {
 			isa = PBXGroup;
 			children = (
+				AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */,
+				AFA2E0D9291264A4007FD4B1 /* Actors */,
+				AFA2E0AA291263A9007FD4B1 /* Utility */,
 				36CA749F29125E4700955CCE /* WhizzApp.swift */,
 				36CA74A129125E4700955CCE /* ContentView.swift */,
 				36CA74A329125E4900955CCE /* Assets.xcassets */,
+				AFA2E0CC2912646F007FD4B1 /* Service */,
 				36CA74A529125E4900955CCE /* Preview Content */,
 			);
 			path = Whizz;
@@ -164,8 +206,62 @@
 				39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */,
 				CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AFA2E0AA291263A9007FD4B1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2E0B1291263AA007FD4B1 /* Constants.swift */,
+				AFA2E0B2291263AA007FD4B1 /* UserDefaultHelper.swift */,
+				AFA2E0B0291263AA007FD4B1 /* Enums.swift */,
+				AFA2E0B4291263AA007FD4B1 /* Extensions */,
+				AFA2E0AE291263AA007FD4B1 /* LocalisationProvider.swift */,
+				AFA2E0AB291263A9007FD4B1 /* CommonMethods.swift */,
+				AFA2E0B3291263AA007FD4B1 /* OpenInService.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		AFA2E0B4291263AA007FD4B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2E0BB291263AA007FD4B1 /* UIImageView+Ext.swift */,
+				AFA2E0B8291263AA007FD4B1 /* DateFormatter+Ext.swift */,
+				AFA2E0BA291263AA007FD4B1 /* UITextField+Ext.swift */,
+				AFA2E0B9291263AA007FD4B1 /* String+Ext.swift */,
+				AFA2E0B7291263AA007FD4B1 /* UIColor+Ext.swift */,
+				AFA2E0B5291263AA007FD4B1 /* UIViewController+Ext.swift */,
+				AFA2E0B6291263AA007FD4B1 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFA2E0CC2912646F007FD4B1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2E0CD2912646F007FD4B1 /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AFA2E0CD2912646F007FD4B1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2E0CE2912646F007FD4B1 /* NetworkManager.swift */,
+				AFA2E0CF2912646F007FD4B1 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AFA2E0D9291264A4007FD4B1 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2E0DB291264A4007FD4B1 /* AppChannel.swift */,
+				AFA2E0DE291264A4007FD4B1 /* CompletableDeferred.swift */,
+				AFA2E0DF291264A4007FD4B1 /* AppActor.swift */,
+			);
+			path = Actors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,8 +502,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA2E0BC291263AA007FD4B1 /* Constants.swift in Sources */,
+				AFA2E0CB291263AA007FD4B1 /* UIViewController+Ext.swift in Sources */,
+				AFA2E0CA291263AA007FD4B1 /* CommonMethods.swift in Sources */,
 				36CA74A229125E4700955CCE /* ContentView.swift in Sources */,
+				AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */,
+				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
+				AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */,
+				AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */,
+				AFA2E0C7291263AA007FD4B1 /* LocalisationProvider.swift in Sources */,
+				AFA2E0BF291263AA007FD4B1 /* String+Ext.swift in Sources */,
 				36CA74A029125E4700955CCE /* WhizzApp.swift in Sources */,
+				AFA2E0C5291263AA007FD4B1 /* Enums.swift in Sources */,
+				AFA2E0C9291263AA007FD4B1 /* UserDefaultHelper.swift in Sources */,
+				AFA2E0C3291263AA007FD4B1 /* UITextField+Ext.swift in Sources */,
+				AFA2E0E5291264A4007FD4B1 /* CompletableDeferred.swift in Sources */,
+				AFA2E0E2291264A4007FD4B1 /* AppChannel.swift in Sources */,
+				AFA2E0C4291263AA007FD4B1 /* UIImageView+Ext.swift in Sources */,
+				AFA2E0BE291263AA007FD4B1 /* DateFormatter+Ext.swift in Sources */,
+				AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */,
+				AFA2E0BD291263AA007FD4B1 /* UIColor+Ext.swift in Sources */,
+				AFA2E0C8291263AA007FD4B1 /* OpenInService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
