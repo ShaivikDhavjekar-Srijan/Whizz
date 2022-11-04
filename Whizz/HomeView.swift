@@ -22,7 +22,7 @@ struct HomeView: View {
                 Image("home")
                     .resizable()
                     .aspectRatio(contentMode:.fit)
-                    .opacity(0.03)
+                    .opacity(0.06)
                 
                 
                 VStack(){
@@ -60,7 +60,7 @@ struct HomeView: View {
                             .frame(height: 51)
                             .foregroundColor(.white)
                             .frame(width:UIScreen.main.bounds.width*0.8)
-                            .background(Color(UIColor.Blue))
+                            .background(Color(UIColor.MidnightBlue))
                             .cornerRadius(8.0)
                     }
                     .padding(.top, 30)
