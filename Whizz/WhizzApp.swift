@@ -11,7 +11,7 @@ import SwiftUI
 struct WhizzApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

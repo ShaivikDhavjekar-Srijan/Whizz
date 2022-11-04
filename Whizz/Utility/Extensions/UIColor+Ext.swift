@@ -30,8 +30,10 @@ extension UIColor {
 
 
 extension UIColor {
-    static let themeColor = UIColor(hex: "#111D3A")
-    static let pocColor = UIColor(hex: "#041429")
+    static let MidnightBlue = UIColor(hex: "#145DA0")
+    static let DarkBlue = UIColor(hex: "#0C2D48")
+    static let Blue = UIColor(hex: "#2E8BC0")
+    static let BabyBlue = UIColor(hex: "#B1D4E0")
     static let whiteColor = UIColor.white
     static let clearColor = UIColor.clear
 }

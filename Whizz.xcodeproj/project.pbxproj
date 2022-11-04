@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6499B129152CC600B4DFE8 /* hiddenNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */; };
+		2D6499B529152D0300B4DFE8 /* GroupBoxStyleC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */; };
+		2D6499B629152D0300B4DFE8 /* DOBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B429152D0300B4DFE8 /* DOBView.swift */; };
+		2D6499B829152D1900B4DFE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B729152D1900B4DFE8 /* HomeView.swift */; };
 		36CA74A029125E4700955CCE /* WhizzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA749F29125E4700955CCE /* WhizzApp.swift */; };
-		36CA74A229125E4700955CCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA74A129125E4700955CCE /* ContentView.swift */; };
 		36CA74A429125E4900955CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CA74A329125E4900955CCE /* Assets.xcassets */; };
 		36CA74A729125E4900955CCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CA74A629125E4900955CCE /* Preview Assets.xcassets */; };
 		36CA74B129125E4A00955CCE /* WhizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA74B029125E4A00955CCE /* WhizzTests.swift */; };
@@ -64,9 +67,12 @@
 		1BECAB902B8F1DFCC47FA333 /* Pods-Whizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz.release.xcconfig"; path = "Target Support Files/Pods-Whizz/Pods-Whizz.release.xcconfig"; sourceTree = "<group>"; };
 		232F079369019587C9DCB6C0 /* Pods_Whizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB51FD2F9E4083F3465C6DA /* Pods-Whizz-WhizzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hiddenNavBar.swift; sourceTree = "<group>"; };
+		2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBoxStyleC.swift; sourceTree = "<group>"; };
+		2D6499B429152D0300B4DFE8 /* DOBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOBView.swift; sourceTree = "<group>"; };
+		2D6499B729152D1900B4DFE8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36CA749C29125E4700955CCE /* Whizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CA749F29125E4700955CCE /* WhizzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzApp.swift; sourceTree = "<group>"; };
-		36CA74A129125E4700955CCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36CA74A329125E4900955CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36CA74A629125E4900955CCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36CA74AC29125E4A00955CCE /* WhizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +148,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D6499B229152D0300B4DFE8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */,
+				2D6499B429152D0300B4DFE8 /* DOBView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		36CA749329125E4700955CCE = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +184,7 @@
 			children = (
 				AFA2E1202914DB06007FD4B1 /* Models */,
 				AFA2E11F2914DAD9007FD4B1 /* Views */,
+				2D6499B729152D1900B4DFE8 /* HomeView.swift */,
 				AFA2E1212914DB35007FD4B1 /* ViewModels */,
 				AFA2E0AA291263A9007FD4B1 /* Utility */,
 				AFA2E0CC2912646F007FD4B1 /* Service */,
@@ -237,6 +253,7 @@
 		AFA2E0B4291263AA007FD4B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */,
 				AFA2E0BB291263AA007FD4B1 /* UIImageView+Ext.swift */,
 				AFA2E0B8291263AA007FD4B1 /* DateFormatter+Ext.swift */,
 				AFA2E0BA291263AA007FD4B1 /* UITextField+Ext.swift */,
@@ -280,7 +297,7 @@
 		AFA2E11F2914DAD9007FD4B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				36CA74A129125E4700955CCE /* ContentView.swift */,
+				2D6499B229152D0300B4DFE8 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -546,12 +563,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6499B829152D1900B4DFE8 /* HomeView.swift in Sources */,
 				AFA2E0BC291263AA007FD4B1 /* Constants.swift in Sources */,
 				AFA2E0CB291263AA007FD4B1 /* UIViewController+Ext.swift in Sources */,
 				AFA2E0CA291263AA007FD4B1 /* CommonMethods.swift in Sources */,
 				AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */,
-				36CA74A229125E4700955CCE /* ContentView.swift in Sources */,
 				AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */,
+				2D6499B529152D0300B4DFE8 /* GroupBoxStyleC.swift in Sources */,
 				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
 				AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */,
 				AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */,
@@ -566,9 +584,11 @@
 				AFA2E0C4291263AA007FD4B1 /* UIImageView+Ext.swift in Sources */,
 				AFA2E1262914FC79007FD4B1 /* SearchFlightsService.swift in Sources */,
 				AFA2E12A29151A48007FD4B1 /* SearchFlightsActor.swift in Sources */,
+				2D6499B129152CC600B4DFE8 /* hiddenNavBar.swift in Sources */,
 				AFA2E0BE291263AA007FD4B1 /* DateFormatter+Ext.swift in Sources */,
 				AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */,
 				AFA2E0BD291263AA007FD4B1 /* UIColor+Ext.swift in Sources */,
+				2D6499B629152D0300B4DFE8 /* DOBView.swift in Sources */,
 				AFA2E0C8291263AA007FD4B1 /* OpenInService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
