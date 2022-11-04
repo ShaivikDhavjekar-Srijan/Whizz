@@ -8,6 +8,14 @@
 import XCTest
 @testable import Whizz
 
+//4
+struct TestLocalisationProvider: LocalisationProvider {
+    //6
+    func getFetchAirportDataError() -> String {
+        return "Failed to Fetch Airport Data"
+    }
+}
+
 class SearchFlightsActorTest: XCTestCase {
 
     override func setUpWithError() throws {
@@ -31,6 +39,22 @@ class SearchFlightsActorTest: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    //1
+    func testItShouldReturnStateGetAirportDataSuccessOnSuccessfulDataFetch() async throws {
+        
+        //3
+        let testLocalisationProvider = TestLocalisationProvider()
+        //8
+        struct TestSearchFlightsService: SearchFlightsService {
+            
+        }
+    }
+    
+    //2
+    func testItShouldReturnStateGetAirportDataFailureOnUnsuccessfulDataFetch() async throws {
+        
     }
 
 }

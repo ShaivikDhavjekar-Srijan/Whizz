@@ -37,6 +37,8 @@
 		AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0DF291264A4007FD4B1 /* AppActor.swift */; };
 		AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */; };
 		AFA2E1232914EA93007FD4B1 /* SearchFlightsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E1222914EA93007FD4B1 /* SearchFlightsActorTest.swift */; };
+		AFA2E1262914FC79007FD4B1 /* SearchFlightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E1252914FC79007FD4B1 /* SearchFlightsService.swift */; };
+		AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E1272914FD5C007FD4B1 /* GetAirportDataResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		AFA2E0DF291264A4007FD4B1 /* AppActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActor.swift; sourceTree = "<group>"; };
 		AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA2E1222914EA93007FD4B1 /* SearchFlightsActorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlightsActorTest.swift; sourceTree = "<group>"; };
+		AFA2E1252914FC79007FD4B1 /* SearchFlightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlightsService.swift; sourceTree = "<group>"; };
+		AFA2E1272914FD5C007FD4B1 /* GetAirportDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAirportDataResponse.swift; sourceTree = "<group>"; };
 		B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.release.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.release.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhizzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +249,7 @@
 		AFA2E0CC2912646F007FD4B1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AFA2E1242914FC49007FD4B1 /* WebService */,
 				AFA2E0CD2912646F007FD4B1 /* Network */,
 			);
 			path = Service;
@@ -280,6 +285,7 @@
 		AFA2E1202914DB06007FD4B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AFA2E1272914FD5C007FD4B1 /* GetAirportDataResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +295,14 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AFA2E1242914FC49007FD4B1 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				AFA2E1252914FC79007FD4B1 /* SearchFlightsService.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +546,7 @@
 				AFA2E0BC291263AA007FD4B1 /* Constants.swift in Sources */,
 				AFA2E0CB291263AA007FD4B1 /* UIViewController+Ext.swift in Sources */,
 				AFA2E0CA291263AA007FD4B1 /* CommonMethods.swift in Sources */,
+				AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */,
 				36CA74A229125E4700955CCE /* ContentView.swift in Sources */,
 				AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */,
 				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
@@ -546,6 +561,7 @@
 				AFA2E0E5291264A4007FD4B1 /* CompletableDeferred.swift in Sources */,
 				AFA2E0E2291264A4007FD4B1 /* AppChannel.swift in Sources */,
 				AFA2E0C4291263AA007FD4B1 /* UIImageView+Ext.swift in Sources */,
+				AFA2E1262914FC79007FD4B1 /* SearchFlightsService.swift in Sources */,
 				AFA2E0BE291263AA007FD4B1 /* DateFormatter+Ext.swift in Sources */,
 				AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */,
 				AFA2E0BD291263AA007FD4B1 /* UIColor+Ext.swift in Sources */,
