@@ -48,8 +48,21 @@ class SearchFlightsActorTest: XCTestCase {
         let testLocalisationProvider = TestLocalisationProvider()
         //8
         struct TestSearchFlightsService: SearchFlightsService {
-            
+            //14
+            func getAirportData(query: String) async throws -> GetAirportDataResponse? {
+                return nil
+            }
         }
+        
+        //16
+        //Given
+        let actor = SearchFlightsActor(searchFlightsService: TestSearchFlightsService(), localisationProvider: testLocalisationProvider)
+        //21
+        let channel = await actor.run()
+        let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+        
+        //When
+        
     }
     
     //2

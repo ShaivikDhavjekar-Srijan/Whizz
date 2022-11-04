@@ -11,3 +11,22 @@ import Foundation
 struct GetAirportDataResponse: Codable {
     
 }
+
+//20
+//For SearchFlightsState to be Equatable -> AirportData has to be equatable
+struct AirportData: Codable, Equatable {
+    let success: Bool
+    let data: [Airport]
+}
+
+struct Airport: Codable, Equatable {
+    let iataCode: String
+    let name: String
+    let city: String?
+    let country: String
+
+    enum CodingKeys: String, CodingKey {
+        case iataCode = "iata_code"
+        case name, city, country
+    }
+}
