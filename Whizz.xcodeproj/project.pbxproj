@@ -182,6 +182,7 @@
 		36CA749E29125E4700955CCE /* Whizz */ = {
 			isa = PBXGroup;
 			children = (
+				36CA749F29125E4700955CCE /* WhizzApp.swift */,
 				AFA2E1202914DB06007FD4B1 /* Models */,
 				AFA2E11F2914DAD9007FD4B1 /* Views */,
 				2D6499B729152D1900B4DFE8 /* HomeView.swift */,
@@ -190,7 +191,6 @@
 				AFA2E0CC2912646F007FD4B1 /* Service */,
 				AFA2E0D9291264A4007FD4B1 /* Actors */,
 				AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */,
-				36CA749F29125E4700955CCE /* WhizzApp.swift */,
 				36CA74A329125E4900955CCE /* Assets.xcassets */,
 				36CA74A529125E4900955CCE /* Preview Content */,
 			);
