@@ -36,6 +36,7 @@
 		AFA2E0E5291264A4007FD4B1 /* CompletableDeferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0DE291264A4007FD4B1 /* CompletableDeferred.swift */; };
 		AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0DF291264A4007FD4B1 /* AppActor.swift */; };
 		AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */; };
+		AFA2E1232914EA93007FD4B1 /* SearchFlightsActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E1222914EA93007FD4B1 /* SearchFlightsActorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		AFA2E0DE291264A4007FD4B1 /* CompletableDeferred.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletableDeferred.swift; sourceTree = "<group>"; };
 		AFA2E0DF291264A4007FD4B1 /* AppActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActor.swift; sourceTree = "<group>"; };
 		AFA2E0E82912651B007FD4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFA2E1222914EA93007FD4B1 /* SearchFlightsActorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlightsActorTest.swift; sourceTree = "<group>"; };
 		B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.release.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.release.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhizzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				36CA74B029125E4A00955CCE /* WhizzTests.swift */,
+				AFA2E1222914EA93007FD4B1 /* SearchFlightsActorTest.swift */,
 			);
 			path = WhizzTests;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36CA74B129125E4A00955CCE /* WhizzTests.swift in Sources */,
+				AFA2E1232914EA93007FD4B1 /* SearchFlightsActorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
