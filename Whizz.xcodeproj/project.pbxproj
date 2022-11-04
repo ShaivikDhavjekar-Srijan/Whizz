@@ -217,10 +217,10 @@
 		AFA2E0AA291263A9007FD4B1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				AFA2E0B4291263AA007FD4B1 /* Extensions */,
 				AFA2E0B1291263AA007FD4B1 /* Constants.swift */,
 				AFA2E0B2291263AA007FD4B1 /* UserDefaultHelper.swift */,
 				AFA2E0B0291263AA007FD4B1 /* Enums.swift */,
-				AFA2E0B4291263AA007FD4B1 /* Extensions */,
 				AFA2E0AE291263AA007FD4B1 /* LocalisationProvider.swift */,
 				AFA2E0AB291263A9007FD4B1 /* CommonMethods.swift */,
 				AFA2E0B3291263AA007FD4B1 /* OpenInService.swift */,
