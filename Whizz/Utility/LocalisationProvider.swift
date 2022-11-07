@@ -11,7 +11,9 @@ import Foundation
 protocol LocalisationProvider{
     
     //7
-    func getFetchAirportDataError() -> String
+    func fetchGetAirportDataError() -> String
+    
+    func fetchGetFlightDataError() -> String
     
 }
 
@@ -19,7 +21,11 @@ protocol LocalisationProvider{
 extension LocalisationProvider{
     
     //7
-    func getFetchAirportDataError() -> String {
+    func fetchGetAirportDataError() -> String {
+        return ""
+    }
+    
+    func fetchGetFlightDataError() -> String {
         return ""
     }
     
@@ -29,8 +35,12 @@ extension LocalisationProvider{
 struct LocalisationProviderImpl:LocalisationProvider{
     
     //7
-    func getFetchAirportDataError() -> String {
+    func fetchGetAirportDataError() -> String {
         return "Failed to Fetch Airport Data"
+    }
+    
+    func fetchGetFlightDataError() -> String {
+        return "Failed to Fetch Flight Data"
     }
 
 }

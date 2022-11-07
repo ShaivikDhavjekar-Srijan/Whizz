@@ -18,14 +18,7 @@ var BaseURL: String {
 }
 
 enum NetworkAPI {
-    case forceUpdate
-    case login(param:AnyDict)
-    case verifyEmail(param:AnyDict)
-    case verifyOtp(param:AnyDict)
-    case resetPassword(param:AnyDict)
-    case signUp(param:AnyDict)
-    case fetchProfile(param: AnyDict)
-    case updateProfile(param: AnyDict)
+    case getAiportData(param:AnyDict)
 }
 
 extension NetworkAPI {
@@ -33,22 +26,8 @@ extension NetworkAPI {
     var path: String  {
         var servicePath = ""
         switch self {
-        case.forceUpdate:
-            servicePath = ApiConstants.FORCE_UPDATE
-        case .login:
-            servicePath = ApiConstants.SIGN_IN
-        case .verifyEmail:
-            servicePath = ApiConstants.VERIFY_EMAIL
-        case .verifyOtp :
-            servicePath = ApiConstants.VERIFY_OTP
-        case .resetPassword :
-            servicePath = ApiConstants.RESET_PASSWORD
-        case .signUp:
-            servicePath = ApiConstants.SIGN_UP
-        case .fetchProfile :
-            servicePath = ApiConstants.FETCH_PROFILE
-        case .updateProfile :
-            servicePath = ApiConstants.UPDATE_PROFILE
+        case.getAiportData:
+            servicePath = ApiConstants.GET_AIRPORT_DATA
         }
         return BaseURL + servicePath
     }
@@ -61,13 +40,7 @@ extension NetworkAPI {
     var parameters:AnyDict? {
         var allParam : AnyDict = [ : ]
         switch self {
-        case .login(let param),
-                .verifyEmail(let param),
-                .verifyOtp(let param),
-                .resetPassword(let param),
-                .signUp(let param),
-                .fetchProfile(let param),
-                .updateProfile(let param):
+        case .getAiportData(param: let param):
             allParam = param
         default:
             allParam = [ : ]
@@ -77,13 +50,6 @@ extension NetworkAPI {
     
     var method:HTTPMethod {
         switch self {
-        case .login,
-                .verifyEmail,
-                .verifyOtp,
-                .resetPassword,
-                .signUp,
-                .updateProfile:
-            return .post
         default:
             return .get
         }
@@ -91,13 +57,6 @@ extension NetworkAPI {
     
     var encoding:ParameterEncoding {
         switch self {
-        case .login,
-                .verifyEmail,
-                .verifyOtp,
-                .resetPassword,
-                .signUp,
-                .updateProfile:
-            return JSONEncoding.default
         default:
             return URLEncoding.default
         }

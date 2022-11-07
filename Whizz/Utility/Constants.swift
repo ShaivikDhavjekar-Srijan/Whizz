@@ -8,38 +8,14 @@
 import Foundation
 
 struct ApiConstants{
-    static let BASE_URL = "https://swiko-demon.herokuapp.com/api/rest/"
-    static let FORCE_UPDATE = "getAppVersion"
-    static let SIGN_IN = "signin"
-    static let VERIFY_EMAIL = "verifyEmail"
-    static let VERIFY_OTP = "verifyUserOtp"
-    static let RESET_PASSWORD = "resetPassword"
-    static let SIGN_UP = "signup"
-    static let FETCH_PROFILE = "getUser"
-    static let UPDATE_PROFILE = "editProfile"
+    static let BASE_URL = "https://app.goflightlabs.com/"
+    static let GET_AIRPORT_DATA = "get-airport-data"
     
     // MARK: API KEYS
-    static let EMAIL = "email"
-    static let PASSWORD = "password"
-    static let OTP = "token"
-    static let FIRST_NAME = "firstName"
-    static let LAST_NAME = "lastName"
-    static let DATE_OF_BIRTH = "dob"
-    static let GENDER = "gender"
-    static let IMAGE_URL = "image_url"
-    static let AUTH_TOKEN = "authToken"
-}
-
-struct CloudinaryConstants {
-    static let CLOUD_NAME = "srijan-swiko"
-    static let PRESET_KEY = "cw9yzb1k"
-    static let FOLDER_NAME = "Swiko_users"
-}
-
-struct GenderConstants {
-    static let MALE = "Male"
-    static let FEMALE = "Female"
-    static let NON_BINARY = "Non-Binary"
+    static let ACCESS_KEY = "access_key"
+    static let API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZjIzMzM1YWRhMmZiZGI1NmM4ZWM5MGZmNzBhMTEyZTI1MzE2YWUyMWViMzY0MDAxYjZmYjIwYzY1MjBmMzc4MjI4M2QwMGUzMmUyZDBhMjciLCJpYXQiOjE2Njc0NjQ3MTEsIm5iZiI6MTY2NzQ2NDcxMSwiZXhwIjoxNjk5MDAwNzExLCJzdWIiOiIxNjg5NCIsInNjb3BlcyI6W119.esAMjiK1Ko8K2XtnHqHOS38gds42NeU-ujZfdG9ePs5TTaM2Z07FVF-94bnnxO8ViRDSpzy2MaX7Lb_a9uu1MA"
+    static let QUERY = "query"
+    
 }
 
 struct DateConstants {

@@ -7,72 +7,44 @@
 
 import Foundation
 
-struct GetFlightDataResponse: Codable {
-    
-}
-
-struct FlightData {
-    let flightDate, flightStatus: String
-    let departure: Departure
-    let arrival: Arrival
-    let airline: Airline
-    let flight: Flight
-    let aircraft, live: String?
+struct GetFlightDataResponse: Codable, Equatable {
+    let flightDate, flightStatus: String?
+    let departure: DepArr?
+    let arrival: DepArr?
+    let airline: Airline?
+    let flight: Flight?
     
 //    init() {}
     
     enum CodingKeys: String, CodingKey {
         case flightDate = "flight_date"
         case flightStatus = "flight_status"
-        case departure, arrival, airline, flight, aircraft, live
+        case departure, arrival, airline, flight
     }
 }
 
-struct Departure {
-    let airport, timezone, iata, icao, terminal: String
-    let gate: String?
+struct DepArr: Codable, Equatable {
+    let airport, timezone, iata: String?
     let delay: Int?
-    let scheduled, estimated, actual, estimatedRunway, actualRunway: String
+    let scheduled, actual: String?
 
     enum CodingKeys: String, CodingKey {
-        case airport, timezone, iata, icao, terminal, gate, delay, scheduled, estimated, actual
-        case estimatedRunway = "estimated_runway"
-        case actualRunway = "actual_runway"
+        case airport, timezone, iata, delay, scheduled, actual
     }
 }
 
-struct Arrival {
-    let airport, timezone, iata, icao, terminal: String
-    let gate: String?
-    let baggage: String
-    let delay: Int?
-    let scheduled, estimated, actual, estimatedRunway, actualRunway: String
-
+struct Airline: Codable, Equatable {
+    let name, iata, icao: String?
+    
     enum CodingKeys: String, CodingKey {
-        case airport, timezone, iata, icao, terminal, gate, delay, scheduled, estimated, actual
-        case estimatedRunway = "estimated_runway"
-        case actualRunway = "actual_runway"
+        case name, iata, icao
     }
 }
 
-struct Airline {
-    let name, iata, icao: String
-}
-
-struct Flight {
-    let number, iata, icao: String
-    let codeshared: Codeshared
-}
-
-struct Codeshared: Codable {
-    let airlineName, airlineIata, airlineIcao, flightNumber, flightIata, flightIcao: String
-
+struct Flight: Codable, Equatable {
+    let number, iata, icao: String?
+    
     enum CodingKeys: String, CodingKey {
-        case airlineName = "airline_name"
-        case airlineIata = "airline_iata"
-        case airlineIcao = "airline_icao"
-        case flightNumber = "flight_number"
-        case flightIata = "flight_iata"
-        case flightIcao = "flight_icao"
+        case number, iata, icao
     }
 }

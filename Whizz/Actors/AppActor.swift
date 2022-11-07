@@ -10,6 +10,7 @@ import Foundation
 actor AppActor {
     
     // MARK:- Services
+    private let searchFlightsService = SearchFlightsServiceImpl(networkManager: NetworkManager.shared)
 //    private let appVersionService = AppVersionServiceImpl(networkManager: NetworkManager.shared)
 //    private let userService = UserServiceImpl(networkManager: NetworkManager.shared)
 //    private let forgotPasswordService = ForgotPasswordServiceImpl(networkManager: NetworkManager.shared)
@@ -20,6 +21,9 @@ actor AppActor {
     func run() async -> AppChannel{
         
         let channel = AppChannelActor()
+        
+        let searchFlightsActor = SearchFlightsActor(searchFlightsService: searchFlightsService, localisationProvider: localisationProvider)
+        let searchFlightsActorChannel = await searchFlightsActor.run()
         
     
         // MARK:- Force Update
@@ -49,6 +53,7 @@ actor AppActor {
                     break
                 }
                 Task {
+                    await searchFlightsActorChannel.send(message: message)
 //                    await navigationActorChannel.send(message: message)
 //                    await forceUpdateActorChannel.send(message: message)
 //                    await userActorChannel.send(message: message)
