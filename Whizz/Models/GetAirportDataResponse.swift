@@ -17,6 +17,12 @@ struct GetAirportDataResponse: Codable {
 struct AirportData: Codable, Equatable {
     let success: Bool
     let data: [Airport]
+    
+    //25
+    init(success: Bool, data: [Airport]) {
+        self.success = success
+        self.data = data
+    }
 }
 
 struct Airport: Codable, Equatable {

@@ -17,6 +17,8 @@ struct TestLocalisationProvider: LocalisationProvider {
 }
 
 class SearchFlightsActorTest: XCTestCase {
+    
+    let query = "India"
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -46,6 +48,10 @@ class SearchFlightsActorTest: XCTestCase {
         
         //3
         let testLocalisationProvider = TestLocalisationProvider()
+        
+        //24
+        let airportData = AirportData(success: true, data: [Airport(iataCode: "DEL", name: "New Delhi", city: "New Delhi", country: "India")])
+        
         //8
         struct TestSearchFlightsService: SearchFlightsService {
             //14
@@ -62,7 +68,21 @@ class SearchFlightsActorTest: XCTestCase {
         let searchFlightsState = CompletableDeferred<SearchFlightsState>()
         
         //When
+        await withTaskGroup(of: Void.self){ group in
+            group.addTask {
+                await channel.send(message: SearchFlightsMessage.GetAirportData(query: self.query))
+            }
+            group.addTask {
+                await channel.send(message: SearchFlightsMessage.GetSearchFlightsState(searchFlightsState))
+            }
+        }
         
+        //23
+        //Then
+        if let result = await searchFlightsState.wait() {
+            print(result)
+            XCTAssertEqual(result, SearchFlightsState.GetAirportDataSuccess(airportData: airportData))
+        }
     }
     
     //2

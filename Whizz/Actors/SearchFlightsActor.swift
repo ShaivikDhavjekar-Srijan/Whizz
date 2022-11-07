@@ -7,6 +7,13 @@
 
 import Foundation
 
+//22
+// API calls for actor
+enum SearchFlightsMessage: AppMessage {
+    case GetAirportData(query: String)
+    case GetSearchFlightsState(CompletableDeferred<SearchFlightsState>)
+}
+
 //18
 // API response from actor
 enum SearchFlightsState: AppState {
