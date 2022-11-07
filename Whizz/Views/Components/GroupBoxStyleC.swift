@@ -18,7 +18,7 @@ struct GroupBoxStyleCreated: GroupBoxStyle {
         .padding(16)
         .frame(alignment: .leading)
         .background(.thickMaterial, in: RoundedRectangle(cornerRadius: 8))
-        .background(Color(UIColor.Blue), in: RoundedRectangle(cornerRadius: 8))
+        .background(Color(UIColor.ComponentColor), in: RoundedRectangle(cornerRadius: 8))
     }
 }
 
