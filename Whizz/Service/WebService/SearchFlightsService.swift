@@ -33,10 +33,16 @@ extension SearchFlightsService {
 
 //12
 struct SearchFlightsServiceImpl: SearchFlightsService {
+    
+    var networkManager:NetworkManager?
+    
+    init(networkManager:NetworkManager){
+        self.networkManager = networkManager
+    }
 
     //13
     func getAirportData(query:String) async throws -> GetAirportDataResponse? {
-        return nil
+        return try await networkManager!.performRequestWithContinuation(serviceType: .getAiportData(param:[ApiConstants.ACCESS_KEY:ApiConstants.API_KEY, ApiConstants.QUERY:query]), type: GetAirportDataResponse.self)
     }
     
     func getFlightData(from: String, to: String, departure: String) async throws -> GetFlightDataResponse? {
