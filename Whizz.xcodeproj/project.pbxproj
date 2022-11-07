@@ -11,6 +11,9 @@
 		2D6499B529152D0300B4DFE8 /* GroupBoxStyleC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */; };
 		2D6499B629152D0300B4DFE8 /* DOBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B429152D0300B4DFE8 /* DOBView.swift */; };
 		2D6499B829152D1900B4DFE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B729152D1900B4DFE8 /* HomeView.swift */; };
+		2DAD52512918D74200240D43 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD52502918D74200240D43 /* GifImageView.swift */; };
+		2DAD52532918DBBA00240D43 /* HomeViewGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2DAD52522918DBBA00240D43 /* HomeViewGif.gif */; };
+		2DAD52552918E79E00240D43 /* AirplaneGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2DAD52542918E79E00240D43 /* AirplaneGif.gif */; };
 		36CA74A029125E4700955CCE /* WhizzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA749F29125E4700955CCE /* WhizzApp.swift */; };
 		36CA74A429125E4900955CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CA74A329125E4900955CCE /* Assets.xcassets */; };
 		36CA74A729125E4900955CCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CA74A629125E4900955CCE /* Preview Assets.xcassets */; };
@@ -72,6 +75,9 @@
 		2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBoxStyleC.swift; sourceTree = "<group>"; };
 		2D6499B429152D0300B4DFE8 /* DOBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOBView.swift; sourceTree = "<group>"; };
 		2D6499B729152D1900B4DFE8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2DAD52502918D74200240D43 /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
+		2DAD52522918DBBA00240D43 /* HomeViewGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HomeViewGif.gif; sourceTree = "<group>"; };
+		2DAD52542918E79E00240D43 /* AirplaneGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AirplaneGif.gif; sourceTree = "<group>"; };
 		36CA749C29125E4700955CCE /* Whizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CA749F29125E4700955CCE /* WhizzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzApp.swift; sourceTree = "<group>"; };
 		36CA74A329125E4900955CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -299,7 +305,10 @@
 		AFA2E11F2914DAD9007FD4B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DAD52542918E79E00240D43 /* AirplaneGif.gif */,
+				2DAD52522918DBBA00240D43 /* HomeViewGif.gif */,
 				2D6499B229152D0300B4DFE8 /* Components */,
+				2DAD52502918D74200240D43 /* GifImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,6 +446,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAD52532918DBBA00240D43 /* HomeViewGif.gif in Resources */,
+				2DAD52552918E79E00240D43 /* AirplaneGif.gif in Resources */,
 				36CA74A729125E4900955CCE /* Preview Assets.xcassets in Resources */,
 				36CA74A429125E4900955CCE /* Assets.xcassets in Resources */,
 			);
@@ -592,6 +603,7 @@
 				AFA2E0BE291263AA007FD4B1 /* DateFormatter+Ext.swift in Sources */,
 				AFA2E0E92912651B007FD4B1 /* AppDelegate.swift in Sources */,
 				AFA2E0BD291263AA007FD4B1 /* UIColor+Ext.swift in Sources */,
+				2DAD52512918D74200240D43 /* GifImageView.swift in Sources */,
 				2D6499B629152D0300B4DFE8 /* DOBView.swift in Sources */,
 				AFA2E0C8291263AA007FD4B1 /* OpenInService.swift in Sources */,
 			);

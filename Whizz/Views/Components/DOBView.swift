@@ -35,7 +35,6 @@ struct DOBView:View{
             
         }.hiddenNavigationBarStyle()
             .frame(width: UIScreen.main.bounds.width*0.8, height: 60.0)
-            //.background(Color.white)
             .sheet(isPresented: $showPicker, onDismiss: {
                 dob = dateFormatter.string(from: date)
             }, content: {

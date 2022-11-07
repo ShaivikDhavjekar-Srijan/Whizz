@@ -30,6 +30,8 @@ extension UIColor {
 
 
 extension UIColor {
+    static let HomePageColor = UIColor(hex: "#464895")
+    static let ComponentColor = UIColor(hex: "#DB923A")
     static let MidnightBlue = UIColor(hex: "#145DA0")
     static let DarkBlue = UIColor(hex: "#0C2D48")
     static let Blue = UIColor(hex: "#2E8BC0")
