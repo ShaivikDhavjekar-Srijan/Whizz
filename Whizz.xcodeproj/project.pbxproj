@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D6499B129152CC600B4DFE8 /* hiddenNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */; };
-		2D6499B529152D0300B4DFE8 /* GroupBoxStyleC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */; };
+		2D6499B529152D0300B4DFE8 /* GroupBoxStyleCreated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B329152D0300B4DFE8 /* GroupBoxStyleCreated.swift */; };
 		2D6499B629152D0300B4DFE8 /* DOBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B429152D0300B4DFE8 /* DOBView.swift */; };
 		2D6499B829152D1900B4DFE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B729152D1900B4DFE8 /* HomeView.swift */; };
 		2D7D0EF829198DAD007A5CEF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D0EF729198DAD007A5CEF /* DetailView.swift */; };
@@ -75,7 +75,7 @@
 		232F079369019587C9DCB6C0 /* Pods_Whizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB51FD2F9E4083F3465C6DA /* Pods-Whizz-WhizzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hiddenNavBar.swift; sourceTree = "<group>"; };
-		2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBoxStyleC.swift; sourceTree = "<group>"; };
+		2D6499B329152D0300B4DFE8 /* GroupBoxStyleCreated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBoxStyleCreated.swift; sourceTree = "<group>"; };
 		2D6499B429152D0300B4DFE8 /* DOBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOBView.swift; sourceTree = "<group>"; };
 		2D6499B729152D1900B4DFE8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2D7D0EF729198DAD007A5CEF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -165,8 +165,9 @@
 		2D6499B229152D0300B4DFE8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2D6499B329152D0300B4DFE8 /* GroupBoxStyleC.swift */,
+				2D6499B329152D0300B4DFE8 /* GroupBoxStyleCreated.swift */,
 				2D6499B429152D0300B4DFE8 /* DOBView.swift */,
+				2DAD52502918D74200240D43 /* GifImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -199,7 +200,6 @@
 				36CA749F29125E4700955CCE /* WhizzApp.swift */,
 				AFA2E1202914DB06007FD4B1 /* Models */,
 				AFA2E11F2914DAD9007FD4B1 /* Views */,
-				2D6499B729152D1900B4DFE8 /* HomeView.swift */,
 				AFA2E1212914DB35007FD4B1 /* ViewModels */,
 				AFA2E0AA291263A9007FD4B1 /* Utility */,
 				AFA2E0CC2912646F007FD4B1 /* Service */,
@@ -312,11 +312,11 @@
 		AFA2E11F2914DAD9007FD4B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2DAD52542918E79E00240D43 /* AirplaneGif.gif */,
 				2D6499B229152D0300B4DFE8 /* Components */,
-				2DAD52502918D74200240D43 /* GifImageView.swift */,
+				2DAD52542918E79E00240D43 /* AirplaneGif.gif */,
 				2D7D0EF729198DAD007A5CEF /* DetailView.swift */,
 				2D9477EC291A3A0B0055DD50 /* SplashView.swift */,
+				2D6499B729152D1900B4DFE8 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 				AFA2E0CA291263AA007FD4B1 /* CommonMethods.swift in Sources */,
 				AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */,
 				AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */,
-				2D6499B529152D0300B4DFE8 /* GroupBoxStyleC.swift in Sources */,
+				2D6499B529152D0300B4DFE8 /* GroupBoxStyleCreated.swift in Sources */,
 				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
 				AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */,
 				AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */,
