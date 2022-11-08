@@ -10,7 +10,6 @@ import Foundation
 enum SearchFlightsUiMessage: Equatable {
     case ShowQueryIsEmptyAlert
     case ShowInvalidQueryAlert
-    case ShowDataIsEmptyAlert
     case ShowFailedGetAirportDataAlert(error: String)
 }
 
@@ -19,6 +18,7 @@ class SearchFlightsViewModel: ObservableObject {
     var appChannel:AppChannel
     
     @Published private(set) var searchFlightsUiMessage: SearchFlightsUiMessage?
+    @Published private(set) var airportData: [Airport]?
     
     init(appChannel:AppChannel){
         self.appChannel = appChannel
@@ -39,7 +39,10 @@ class SearchFlightsViewModel: ObservableObject {
             
             if let result = await searchFlightsState.wait() {
                 switch (result) {
-                case .GetAirportDataSuccess(airportData: let aiportData):
+                case .GetAirportDataSuccess(airportData: let airportData):
+                    
+                    await setAirportData(airportResponse: airportData.data)
+                    
                     break
                 case .GetAirportDataFailure(error: let error):
                     searchFlightsUiMessage = SearchFlightsUiMessage.ShowFailedGetAirportDataAlert(error: error)
@@ -47,6 +50,12 @@ class SearchFlightsViewModel: ObservableObject {
                 default: break
                 }
             }
+        }
+    }
+    
+    @MainActor private func setAirportData(airportResponse: [Airport]?) {
+        if let data = airportResponse {
+            airportData = data
         }
     }
 }
