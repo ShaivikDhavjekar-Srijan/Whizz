@@ -39,13 +39,13 @@ class SearchFlightsActorTest: XCTestCase {
         let testLocalisationProvider = TestLocalisationProvider()
         
         //24
-        let airportData = GetAirportDataResponse(success: true, data: [Airport(iataCode: "DEL", name: "New Delhi", city: "New Delhi", country: "India")])
+        let airportData = GetAirportDataResponse(success: true, data: [Airport(iataCode: "DEL", name: "New Delhi", city: "New Delhi", country: "India")], message: nil)
         
         //8
         struct TestSearchFlightsService: SearchFlightsService {
             //14
             func getAirportData(query: String) async throws -> GetAirportDataResponse? {
-                return GetAirportDataResponse(success: true, data: [Airport(iataCode: "DEL", name: "New Delhi", city: "New Delhi", country: "India")])
+                return GetAirportDataResponse(success: true, data: [Airport(iataCode: "DEL", name: "New Delhi", city: "New Delhi", country: "India")], message: nil)
             }
         }
         
