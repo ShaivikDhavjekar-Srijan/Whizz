@@ -48,6 +48,8 @@
 		AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E1272914FD5C007FD4B1 /* GetAirportDataResponse.swift */; };
 		AFA2E12A29151A48007FD4B1 /* SearchFlightsActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E12929151A48007FD4B1 /* SearchFlightsActor.swift */; };
 		AFA2E12C2918DB95007FD4B1 /* GetFlightDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E12B2918DB95007FD4B1 /* GetFlightDataResponse.swift */; };
+		AFA2E132291A5096007FD4B1 /* SearchFlightsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E131291A5096007FD4B1 /* SearchFlightsViewModelTest.swift */; };
+		AFA2E134291A50A0007FD4B1 /* SearchFlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E133291A50A0007FD4B1 /* SearchFlightsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		AFA2E1272914FD5C007FD4B1 /* GetAirportDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAirportDataResponse.swift; sourceTree = "<group>"; };
 		AFA2E12929151A48007FD4B1 /* SearchFlightsActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlightsActor.swift; sourceTree = "<group>"; };
 		AFA2E12B2918DB95007FD4B1 /* GetFlightDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlightDataResponse.swift; sourceTree = "<group>"; };
+		AFA2E131291A5096007FD4B1 /* SearchFlightsViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightsViewModelTest.swift; sourceTree = "<group>"; };
+		AFA2E133291A50A0007FD4B1 /* SearchFlightsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightsViewModel.swift; sourceTree = "<group>"; };
 		B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.release.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.release.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhizzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +222,7 @@
 		36CA74AF29125E4A00955CCE /* WhizzTests */ = {
 			isa = PBXGroup;
 			children = (
+				AFA2E131291A5096007FD4B1 /* SearchFlightsViewModelTest.swift */,
 				36CA74B029125E4A00955CCE /* WhizzTests.swift */,
 				AFA2E1222914EA93007FD4B1 /* SearchFlightsActorTest.swift */,
 			);
@@ -328,6 +333,7 @@
 		AFA2E1212914DB35007FD4B1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AFA2E133291A50A0007FD4B1 /* SearchFlightsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -589,6 +595,7 @@
 				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
 				AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */,
 				AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */,
+				AFA2E134291A50A0007FD4B1 /* SearchFlightsViewModel.swift in Sources */,
 				AFA2E0C7291263AA007FD4B1 /* LocalisationProvider.swift in Sources */,
 				2D9477ED291A3A0B0055DD50 /* SplashView.swift in Sources */,
 				AFA2E0BF291263AA007FD4B1 /* String+Ext.swift in Sources */,
@@ -618,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36CA74B129125E4A00955CCE /* WhizzTests.swift in Sources */,
+				AFA2E132291A5096007FD4B1 /* SearchFlightsViewModelTest.swift in Sources */,
 				AFA2E1232914EA93007FD4B1 /* SearchFlightsActorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

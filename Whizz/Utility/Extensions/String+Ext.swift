@@ -15,6 +15,13 @@ extension String{
         return result
     }
     
+    func isValidQuery() -> Bool {
+        let queryRegEx = "^[A-Za-z]{1}[A-Za-z ]*$"
+        let queryTest = NSPredicate(format:"SELF MATCHES %@", queryRegEx)
+        let result = queryTest.evaluate(with: self)
+        return result
+    }
+    
     func removeWhiteSpacesFromTheString() -> String {
         return components(separatedBy: .whitespaces).joined()
     }
