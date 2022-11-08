@@ -12,21 +12,24 @@ import Foundation
 struct GetAirportDataResponse: Codable, Equatable {
     let success: Bool?
     let data: [Airport]?
+    let message: String?
     
     enum CodingKeys: String, CodingKey {
-        case success, data
+        case success, data, message
     }
     
     //25
-    init(success: Bool, data: [Airport]) {
+    init(success: Bool, data: [Airport], message: String?) {
         self.success = success
         self.data = data
+        self.message = message
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         success = try container.decodeIfPresent(Bool.self, forKey: .success)
         data = try container.decodeIfPresent([Airport].self, forKey: .data)
+        message = try container.decodeIfPresent(String.self, forKey: .message)
     }
 }
 
