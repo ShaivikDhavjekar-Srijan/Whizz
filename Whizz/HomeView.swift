@@ -21,7 +21,9 @@ struct HomeView: View {
         
         ZStack(alignment: .top) {
             
-            Color.black.edgesIgnoringSafeArea(.all)
+            
+                Color.black.edgesIgnoringSafeArea(.all)
+            
             GifImageView("AirplaneGif")
                 .frame(width:UIScreen.main.bounds.width*0.8, height: 233)
             
@@ -81,7 +83,7 @@ struct HomeView: View {
             
         }
         
-            
+        
         
  
     }

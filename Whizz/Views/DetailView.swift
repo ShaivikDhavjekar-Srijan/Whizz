@@ -22,13 +22,13 @@ struct DetailView: View {
                        Text("Boarding Pass")
                            .font(.largeTitle)
                            .bold()
-                           .foregroundColor(.white)
+                           .foregroundColor(.black)
                        Button("Download Ticket") {
 
                        }
                    }
                }
-               .accentColor(Color.white)
+               .accentColor(Color.black)
     }
 }
 
