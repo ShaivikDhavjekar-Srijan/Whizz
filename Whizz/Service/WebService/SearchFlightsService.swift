@@ -13,7 +13,7 @@ protocol SearchFlightsService {
     //10
     func getAirportData(query:String) async throws -> GetAirportDataResponse?
     
-    func getFlightData(from:String, to:String, departure:String) async throws -> GetFlightDataResponse?
+    func getFlightData(from:String, to:String, departure:String) async throws -> [GetFlightDataResponse]?
     
 }
 
@@ -25,7 +25,7 @@ extension SearchFlightsService {
         return nil
     }
     
-    func getFlightData(from: String, to: String, departure: String) async throws -> GetFlightDataResponse? {
+    func getFlightData(from: String, to: String, departure: String) async throws -> [GetFlightDataResponse]? {
         return nil
     }
     
