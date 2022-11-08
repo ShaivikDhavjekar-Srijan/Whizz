@@ -50,19 +50,40 @@ struct SearchView: View {
                     if model.airportData == [] {
                         Text("Sorry! No result found :(")
                     } else {
-                        ForEach(model.airportData!, id: \.name) { airport in
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(airport.name!)
-                                        .font(.headline)
-                                    Text("\(airport.city!), \( airport.country!)")
+                        VStack(spacing: 10) {
+                            ForEach(model.airportData!, id: \.name) { airport in
+                                if (airport.city != nil) {
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text(airport.name!)
+                                                .font(.headline)
+                                            Text("\(airport.city!), \( airport.country!)")
+                                                .font(.subheadline)
+                                        }
+                                        Spacer()
+                                        Text(airport.iataCode!)
+                                            .fontWeight(.bold)
+                                            .font(.system(size: 32))
+                                    }
+                                    .frame(width: UIScreen.main.bounds.width*0.8, height: 100)
+                                    .padding(10)
+                                    .background(Color.teal)
+                                    .onTapGesture {
+                                        query = airport.iataCode ?? "Failed"
+                                    }
                                 }
-                                Text(airport.iataCode!)
                             }
+                            Spacer()
                         }
                     }
                 } else {
-                    Text("What are you searching for?")
+                    if model.searchFlightsUiMessage == .ShowQueryIsEmptyAlert {
+                        Text("The Query is Empty")
+                    } else if model.searchFlightsUiMessage == .ShowInvalidQueryAlert {
+                        Text("Invalid Query")
+                    } else {
+                        Text("What are you searching for?")
+                    }
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.85)
