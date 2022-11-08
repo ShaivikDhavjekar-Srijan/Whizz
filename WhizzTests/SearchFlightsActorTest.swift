@@ -23,6 +23,9 @@ struct TestLocalisationProvider: LocalisationProvider {
 class SearchFlightsActorTest: XCTestCase {
     
     let query = "India"
+    let from = "China"
+    let to = "India"
+    let departure = "2022-11-15"
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -121,6 +124,29 @@ class SearchFlightsActorTest: XCTestCase {
                 return GetFlightDataResponse(flightDate: "2022-11-08", flightStatus: "active", departure: DepArr(airport: "Chhatrapati Shivaji International (Sahar International)", timezone: "Asia/Kolkata", iata: "BOM", delay: 14, scheduled: "2022-11-08T08:45:00+00:00", actual: "2022-11-08T08:58:00+00:00"), arrival: DepArr(airport: "Indira Gandhi International", timezone: "Asia/Kolkata", iata: "DEL", delay: nil , scheduled: "2022-11-08T11:00:00+00:00", actual: nil), airline: Airline(name: "Vistara", iata: "UK", icao: "VTI"), flight: Flight(number: "970", iata: "UK970", icao: "VTI970"))
             }
             
+        }
+        
+        //Given
+        let actor = SearchFlightsActor(searchFlightsService: TestSearchFlightsService(), localisationProvider: testLocalisationProvider)
+        
+        let channel = await actor.run()
+        let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+        
+        //When
+        await withTaskGroup(of: Void.self){ group in
+            group.addTask {
+                await channel.send(message: SearchFlightsMessage.GetFlightData(from: self.from, to: self.to, departure: self.departure))
+            }
+            group.addTask {
+                await channel.send(message: SearchFlightsMessage.GetSearchFlightsState(searchFlightsState))
+            }
+        }
+        
+       
+        //Then
+        if let result = await searchFlightsState.wait() {
+            print(result)
+            XCTAssertEqual(result, SearchFlightsState.GetFlightDataSuccess(flightData: [flightData]))
         }
         
     
