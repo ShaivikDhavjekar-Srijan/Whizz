@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D6499B129152CC600B4DFE8 /* hiddenNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */; };
-		2D6499B529152D0300B4DFE8 /* GroupBoxStyleCreated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B329152D0300B4DFE8 /* GroupBoxStyleCreated.swift */; };
+		2D6499B529152D0300B4DFE8 /* GroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B329152D0300B4DFE8 /* GroupBoxStyle.swift */; };
 		2D6499B629152D0300B4DFE8 /* DOBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B429152D0300B4DFE8 /* DOBView.swift */; };
 		2D6499B829152D1900B4DFE8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6499B729152D1900B4DFE8 /* HomeView.swift */; };
 		2D7D0EF829198DAD007A5CEF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D0EF729198DAD007A5CEF /* DetailView.swift */; };
@@ -24,6 +24,7 @@
 		39AA36F72AB085A4EC5D6693 /* Pods_Whizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232F079369019587C9DCB6C0 /* Pods_Whizz.framework */; };
 		47A7FBEA1443945718DF9A92 /* Pods_Whizz_WhizzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */; };
 		540F230A853A0486B9DC1658 /* Pods_WhizzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */; };
+		AF964E65291A92160011F5F6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF964E64291A92160011F5F6 /* SearchView.swift */; };
 		AFA2E0BC291263AA007FD4B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B1291263AA007FD4B1 /* Constants.swift */; };
 		AFA2E0BD291263AA007FD4B1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B7291263AA007FD4B1 /* UIColor+Ext.swift */; };
 		AFA2E0BE291263AA007FD4B1 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B8291263AA007FD4B1 /* DateFormatter+Ext.swift */; };
@@ -75,7 +76,7 @@
 		232F079369019587C9DCB6C0 /* Pods_Whizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB51FD2F9E4083F3465C6DA /* Pods-Whizz-WhizzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D6499B029152CC600B4DFE8 /* hiddenNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hiddenNavBar.swift; sourceTree = "<group>"; };
-		2D6499B329152D0300B4DFE8 /* GroupBoxStyleCreated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBoxStyleCreated.swift; sourceTree = "<group>"; };
+		2D6499B329152D0300B4DFE8 /* GroupBoxStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupBoxStyle.swift; sourceTree = "<group>"; };
 		2D6499B429152D0300B4DFE8 /* DOBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOBView.swift; sourceTree = "<group>"; };
 		2D6499B729152D1900B4DFE8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2D7D0EF729198DAD007A5CEF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		36CA74BC29125E4A00955CCE /* WhizzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhizzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.debug.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.debug.xcconfig"; sourceTree = "<group>"; };
 		55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz_WhizzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF964E64291A92160011F5F6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AFA2E0AB291263A9007FD4B1 /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		AFA2E0AE291263AA007FD4B1 /* LocalisationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalisationProvider.swift; sourceTree = "<group>"; };
 		AFA2E0B0291263AA007FD4B1 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -165,7 +167,7 @@
 		2D6499B229152D0300B4DFE8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2D6499B329152D0300B4DFE8 /* GroupBoxStyleCreated.swift */,
+				2D6499B329152D0300B4DFE8 /* GroupBoxStyle.swift */,
 				2D6499B429152D0300B4DFE8 /* DOBView.swift */,
 				2DAD52502918D74200240D43 /* GifImageView.swift */,
 			);
@@ -317,6 +319,7 @@
 				2D7D0EF729198DAD007A5CEF /* DetailView.swift */,
 				2D9477EC291A3A0B0055DD50 /* SplashView.swift */,
 				2D6499B729152D1900B4DFE8 /* HomeView.swift */,
+				AF964E64291A92160011F5F6 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -591,10 +594,11 @@
 				AFA2E0CA291263AA007FD4B1 /* CommonMethods.swift in Sources */,
 				AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */,
 				AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */,
-				2D6499B529152D0300B4DFE8 /* GroupBoxStyleCreated.swift in Sources */,
+				2D6499B529152D0300B4DFE8 /* GroupBoxStyle.swift in Sources */,
 				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
 				AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */,
 				AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */,
+				AF964E65291A92160011F5F6 /* SearchView.swift in Sources */,
 				AFA2E134291A50A0007FD4B1 /* SearchFlightsViewModel.swift in Sources */,
 				AFA2E0C7291263AA007FD4B1 /* LocalisationProvider.swift in Sources */,
 				2D9477ED291A3A0B0055DD50 /* SplashView.swift in Sources */,
