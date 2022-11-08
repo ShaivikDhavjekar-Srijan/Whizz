@@ -152,10 +152,42 @@ class SearchFlightsActorTest: XCTestCase {
     
     }
     
-//    func testItShouldReturnStateGetFlightDataFailureOnUnsuccessfulDataFetch() async throws{
-//
-//        let testLocalisationProvider = TestLocalisationProvider()
-//
-//    }
+    
+    func testItShouldReturnStateGetFlightDataFailureOnUnsuccessfulDataFetch() async throws{
+
+        let testLocalisationProvider = TestLocalisationProvider()
+        
+        //8
+        struct TestSearchFlightsService: SearchFlightsService {
+            //14
+            func getFlightData(from: String, to: String, departure: String) async throws -> [GetFlightDataResponse]? {
+                return nil
+            }
+        }
+        
+        //Given
+        let actor = SearchFlightsActor(searchFlightsService: TestSearchFlightsService(), localisationProvider: testLocalisationProvider)
+        let channel = await actor.run()
+        let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+        
+        
+        //When
+        await withTaskGroup(of: Void.self){ group in
+            group.addTask {
+                await channel.send(message: SearchFlightsMessage.GetFlightData(from: self.from, to: self.to, departure: self.departure))
+            }
+            group.addTask {
+                await channel.send(message: SearchFlightsMessage.GetSearchFlightsState(searchFlightsState))
+            }
+        }
+        
+        //Then
+        if let result = await searchFlightsState.wait() {
+            print(result)
+            XCTAssertEqual(result, SearchFlightsState.GetFlightDataFailure(error: testLocalisationProvider.fetchGetFlightDataError()))
+        }
+
+    }
+    
 
 }

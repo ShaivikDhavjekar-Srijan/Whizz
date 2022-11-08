@@ -92,6 +92,7 @@ actor SearchFlightsActor{
         return SearchFlightsState.GetAirportDataFailure(error: localisationProvider.fetchGetAirportDataError())
     }
     
+    
     func getFlightData(searchFlightsService:SearchFlightsService?, localisationProvider:LocalisationProvider, from:String, to:String, departure:String) async -> SearchFlightsState? {
 
         if let service = searchFlightsService{
