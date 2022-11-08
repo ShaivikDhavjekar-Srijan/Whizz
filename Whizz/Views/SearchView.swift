@@ -28,7 +28,10 @@ struct SearchView: View {
                     .cornerRadius(17)
                 
                 Button {
-                    
+                    UIApplication.shared.hideKeyboard()
+                    Task{
+                        try await model.getAirportData(query:self.query)
+                    }
                 } label: {
                     Image(systemName: "magnifyingglass")
                         .resizable()
@@ -36,11 +39,33 @@ struct SearchView: View {
                         .frame(width:30, height:30)
                         .padding(10)
                         .background(Color(UIColor.ComponentColor))
-                        .cornerRadius(100)
+                        .cornerRadius(17)
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.15)
             .background(.black)
+            
+            ZStack {
+                if model.airportData != nil {
+                    if model.airportData == [] {
+                        Text("Sorry! No result found :(")
+                    } else {
+                        ForEach(model.airportData!, id: \.name) { airport in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(airport.name!)
+                                        .font(.headline)
+                                    Text("\(airport.city!), \( airport.country!)")
+                                }
+                                Text(airport.iataCode!)
+                            }
+                        }
+                    }
+                } else {
+                    Text("What are you searching for?")
+                }
+            }
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height*0.85)
         }
     }
 }
