@@ -19,6 +19,7 @@ var BaseURL: String {
 
 enum NetworkAPI {
     case getAiportData(param:AnyDict)
+    case getFlightData(param:AnyDict)
 }
 
 extension NetworkAPI {
@@ -28,6 +29,8 @@ extension NetworkAPI {
         switch self {
         case.getAiportData:
             servicePath = ApiConstants.GET_AIRPORT_DATA
+        case.getFlightData:
+            servicePath = ApiConstants.GET_FLIGHTS
         }
         return BaseURL + servicePath
     }
@@ -40,7 +43,7 @@ extension NetworkAPI {
     var parameters:AnyDict? {
         var allParam : AnyDict = [ : ]
         switch self {
-        case .getAiportData(param: let param):
+        case .getAiportData(param: let param), .getFlightData(param: let param):
             allParam = param
         default:
             allParam = [ : ]

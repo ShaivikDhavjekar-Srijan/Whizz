@@ -45,8 +45,8 @@ struct SearchFlightsServiceImpl: SearchFlightsService {
         return try await networkManager!.performRequestWithContinuation(serviceType: .getAiportData(param:[ApiConstants.ACCESS_KEY:ApiConstants.API_KEY, ApiConstants.QUERY:query]), type: GetAirportDataResponse.self)
     }
     
-    func getFlightData(from: String, to: String, departure: String) async throws -> GetFlightDataResponse? {
-        return nil
+    func getFlightData(from: String, to: String, departure: String) async throws -> [GetFlightDataResponse]? {
+        return try await networkManager!.performRequestWithContinuation(serviceType: .getFlightData(param:[ApiConstants.ACCESS_KEY:ApiConstants.API_KEY, ApiConstants.FROM:from, ApiConstants.TO:to, ApiConstants.DEPARTURE:departure]), type: [GetFlightDataResponse].self)
     }
     
 }

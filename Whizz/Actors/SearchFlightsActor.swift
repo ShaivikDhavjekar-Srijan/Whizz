@@ -22,6 +22,7 @@ enum SearchFlightsState: AppState {
     case GetAirportDataSuccess(airportData: GetAirportDataResponse)
     case GetAirportDataFailure(error: String)
     case GetFlightDataSuccess(flightData: [GetFlightDataResponse])
+    case GetFlightDataFailure(error: String)
     
 }
 
@@ -56,6 +57,10 @@ actor SearchFlightsActor{
                     searchFlightsState = await getAirportData(searchFlightsService:searchFlightsService,
                                                         localisationProvider:localisationProvider,
                                                         query:query)
+                    
+                case SearchFlightsMessage.GetFlightData(from: let from, to: let to, departure: let departure):
+                    searchFlightsState = await getFlightData(searchFlightsService:searchFlightsService,
+                                                        localisationProvider:localisationProvider, from: from, to: to, departure: departure)
                 
                 case SearchFlightsMessage.GetSearchFlightsState(let completableDeferred):
                     if let state = searchFlightsState {
@@ -85,5 +90,19 @@ actor SearchFlightsActor{
             }
         }
         return SearchFlightsState.GetAirportDataFailure(error: localisationProvider.fetchGetAirportDataError())
+    }
+    
+    func getFlightData(searchFlightsService:SearchFlightsService?, localisationProvider:LocalisationProvider, from:String, to:String, departure:String) async -> SearchFlightsState? {
+
+        if let service = searchFlightsService{
+            do {
+                if let result = try await service.getFlightData(from: from, to: to, departure: departure) {
+                    return SearchFlightsState.GetFlightDataSuccess(flightData: result)
+                }
+            } catch {
+                return SearchFlightsState.GetFlightDataFailure(error: localisationProvider.fetchGetFlightDataError())
+            }
+        }
+        return SearchFlightsState.GetFlightDataFailure(error: localisationProvider.fetchGetFlightDataError())
     }
 }
