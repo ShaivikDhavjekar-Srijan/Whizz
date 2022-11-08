@@ -21,6 +21,16 @@ struct GetFlightDataResponse: Codable, Equatable {
         case flightStatus = "flight_status"
         case departure, arrival, airline, flight
     }
+    
+    init(flightDate: String, flightStatus: String, departure: DepArr, arrival: DepArr, airline: Airline, flight: Flight){
+        self.flightDate = flightStatus
+        self.flightStatus = flightStatus
+        self.departure = departure
+        self.arrival = arrival
+        self.airline = airline
+        self.flight = flight
+        
+    }
 }
 
 struct DepArr: Codable, Equatable {
@@ -31,6 +41,15 @@ struct DepArr: Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case airport, timezone, iata, delay, scheduled, actual
     }
+    
+    init(airport: String, timezone: String, iata: String, delay:Int?, scheduled:String, actual:String?){
+        self.airport = airport
+        self.timezone = timezone
+        self.iata = iata
+        self.delay = delay
+        self.scheduled = scheduled
+        self.actual = actual
+    }
 }
 
 struct Airline: Codable, Equatable {
@@ -38,6 +57,13 @@ struct Airline: Codable, Equatable {
     
     enum CodingKeys: String, CodingKey {
         case name, iata, icao
+    }
+    
+    init(name: String, iata: String, icao: String){
+        self.name = name
+        self.iata = iata
+        self.icao = icao
+        
     }
 }
 
@@ -47,4 +73,11 @@ struct Flight: Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case number, iata, icao
     }
+    
+    init(number: String, iata: String, icao: String){
+        self.number = number
+        self.iata = iata
+        self.icao = icao
+    }
+    
 }

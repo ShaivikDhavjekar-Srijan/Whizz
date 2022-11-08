@@ -108,5 +108,28 @@ class SearchFlightsActorTest: XCTestCase {
             XCTAssertEqual(result, SearchFlightsState.GetAirportDataFailure(error: testLocalisationProvider.fetchGetAirportDataError()))
         }
     }
+    
+    func testItShouldReturnStateGetFlightDataSuccessOnSuccessfulDataFetch() async throws {
+        
+        //a
+        let testLocalisationProvider = TestLocalisationProvider()
+        
+        let flightData = GetFlightDataResponse(flightDate: "2022-11-08", flightStatus: "active", departure: DepArr(airport: "Chhatrapati Shivaji International (Sahar International)", timezone: "Asia/Kolkata", iata: "BOM", delay: 14, scheduled: "2022-11-08T08:45:00+00:00", actual: "2022-11-08T08:58:00+00:00"), arrival: DepArr(airport: "Indira Gandhi International", timezone: "Asia/Kolkata", iata: "DEL", delay: nil , scheduled: "2022-11-08T11:00:00+00:00", actual: nil), airline: Airline(name: "Vistara", iata: "UK", icao: "VTI"), flight: Flight(number: "970", iata: "UK970", icao: "VTI970"))
+        
+        struct TestSearchFlightsService: SearchFlightsService {
+            func getFlightData(from: String, to: String, departure: String) async throws -> GetFlightDataResponse? {
+                return GetFlightDataResponse(flightDate: "2022-11-08", flightStatus: "active", departure: DepArr(airport: "Chhatrapati Shivaji International (Sahar International)", timezone: "Asia/Kolkata", iata: "BOM", delay: 14, scheduled: "2022-11-08T08:45:00+00:00", actual: "2022-11-08T08:58:00+00:00"), arrival: DepArr(airport: "Indira Gandhi International", timezone: "Asia/Kolkata", iata: "DEL", delay: nil , scheduled: "2022-11-08T11:00:00+00:00", actual: nil), airline: Airline(name: "Vistara", iata: "UK", icao: "VTI"), flight: Flight(number: "970", iata: "UK970", icao: "VTI970"))
+            }
+            
+        }
+        
+    
+    }
+    
+//    func testItShouldReturnStateGetFlightDataFailureOnUnsuccessfulDataFetch() async throws{
+//
+//        let testLocalisationProvider = TestLocalisationProvider()
+//
+//    }
 
 }

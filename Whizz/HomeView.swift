@@ -52,7 +52,7 @@ struct HomeView: View {
                                 }
                                 DOBView(date:$DOB,dob:$DOBString)
                                     .frame(height:60.0)
-
+    
 
                             }label: {
                                 Label("Search flight", systemImage: "airplane.arrival")

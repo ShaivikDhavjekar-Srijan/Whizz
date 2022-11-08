@@ -26,7 +26,7 @@ struct DOBView:View{
             Text("")
                 .frame(height: 60.0)
                 .frame(width:UIScreen.main.bounds.width*0.8)
-                .background(Color.clear)
+               // .background(Color.clear)
         }
             VStack{
                 TextField("DOB", text:$dob)
@@ -39,8 +39,8 @@ struct DOBView:View{
                 dob = dateFormatter.string(from: date)
             }, content: {
                 CusDatePicker(currentDate: $date)
+                    .background(.black)
             })
-        
     }
 }
 
@@ -48,7 +48,7 @@ struct CusDatePicker: View {
     @Binding var currentDate: Date
     
     var body: some View {
-        DatePicker("", selection: $currentDate, displayedComponents: [.date]).labelsHidden().datePickerStyle(GraphicalDatePickerStyle())
+        DatePicker("", selection: $currentDate, displayedComponents: [.date]).labelsHidden().datePickerStyle(GraphicalDatePickerStyle()).background(.black)
         
     }
 }
