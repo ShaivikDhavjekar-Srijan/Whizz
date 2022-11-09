@@ -31,9 +31,9 @@ struct SplashView: View {
     var body: some View {
         ZStack {
 
-            HomeView()
-                .listStyle(.plain)
-                .scaleEffect(done ? 1: 0.95)
+//            HomeView()
+//                .listStyle(.plain)
+//                .scaleEffect(done ? 1: 0.95)
             
             VStack {
                 Image("Splash")
