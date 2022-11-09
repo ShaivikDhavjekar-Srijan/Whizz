@@ -24,7 +24,7 @@ struct SearchView: View {
                     .frame(width: UIScreen.main.bounds.width*0.7, height: 30)
                     .padding(.horizontal)
                     .padding(.vertical, 10)
-                    .background(Color(UIColor.whiteColor))
+                    .background(Color(.white))
                     .cornerRadius(17)
                 
                 Button {
@@ -38,7 +38,7 @@ struct SearchView: View {
                         .foregroundColor(.black)
                         .frame(width:30, height:30)
                         .padding(10)
-                        .background(Color(UIColor.ComponentColor))
+                        .background(Color("ComponentColor"))
                         .cornerRadius(17)
                 }
             }
@@ -65,9 +65,11 @@ struct SearchView: View {
                                             .fontWeight(.bold)
                                             .font(.system(size: 32))
                                     }
-                                    .frame(width: UIScreen.main.bounds.width*0.8, height: 100)
-                                    .padding(10)
-                                    .background(Color.teal)
+                                    .frame(width: UIScreen.main.bounds.width*0.8, height: 90)
+                                    .padding(.horizontal, 20)
+                                    .background(.thickMaterial)
+                                    .background(Color("ComponentColor"))
+                                    .cornerRadius(17)
                                     .onTapGesture {
                                         query = airport.iataCode ?? "Failed"
                                     }
