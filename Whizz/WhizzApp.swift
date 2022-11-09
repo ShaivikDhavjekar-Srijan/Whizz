@@ -13,22 +13,7 @@ struct WhizzApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AppView().environmentObject(delegate)
-        }
-    }
-}
-
-struct AppView:View{
-    @EnvironmentObject var delegate:AppDelegate
-    var body: some View{
-        if(delegate.isAppChannelAvailable){
-            if let channel = delegate.appStream {
-                HomeView(channel: channel)
-//                SplashView()
-            }
-        }
-        else{
-            Text("Please Wait while the App is Loading.")
+            SplashView().environmentObject(delegate)
         }
     }
 }

@@ -15,6 +15,8 @@ enum AnimationState {
 
 struct SplashView: View {
     
+    @EnvironmentObject var delegate:AppDelegate
+    
     @State private var animationState: AnimationState = .normal
     @State private var done: Bool = false
     
@@ -28,12 +30,19 @@ struct SplashView: View {
                 return 0.4
         }
     }
+    
     var body: some View {
         ZStack {
-
-//            HomeView()
-//                .listStyle(.plain)
-//                .scaleEffect(done ? 1: 0.95)
+            if(delegate.isAppChannelAvailable){
+                if let channel = delegate.appStream {
+                    HomeView(channel: channel)
+                        .listStyle(.plain)
+                        .scaleEffect(done ? 1: 0.95)
+                }
+            }
+            else{
+                Text("Please Wait while the App is Loading.")
+            }
             
             VStack {
                 Image("Splash")
