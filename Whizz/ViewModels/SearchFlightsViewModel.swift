@@ -25,6 +25,7 @@ class SearchFlightsViewModel: ObservableObject {
     
     @Published private(set) var searchFlightsUiMessage: SearchFlightsUiMessage?
     @Published private(set) var airportData: [Airport]?
+//    @Published private(set) var flightData: Airline?
     @Published var showAlert: Bool = false
    // @Published private(set) var flightData:
     
@@ -78,12 +79,35 @@ class SearchFlightsViewModel: ObservableObject {
             return
         }
         
-        let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+        
+//        let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+//        await appChannel.send(message: SearchFlightsMessage.GetFlightData(from: from, to: to, departure: departure))
+//        await appChannel.send(message: SearchFlightsMessage.GetSearchFlightsState(searchFlightsState))
+//
+//        if let result = await searchFlightsState.wait() {
+//            switch (result) {
+//            case .GetFlightDataSuccess(flightData: let flightData):
+//
+//                await setFlightData(FlightResponse: flightData.airline)
+//
+//                break
+//            case .GetAirportDataFailure(error: let error):
+//                searchFlightsUiMessage = SearchFlightsUiMessage.ShowFailedGetAirportDataAlert(error: error)
+//                break
+//            default: break
+//            }
+//        }
         
     }
     
     func clearAirportData() {
         airportData = nil
+    }
+    
+    @MainActor private func setAirportData(airportResponse: [Airport]?) {
+        if let data = airportResponse {
+            airportData = data
+        }
     }
     
     @MainActor private func UpdateSearchFlightsUiMessage(message:SearchFlightsUiMessage, showAlert:Bool){
@@ -92,10 +116,16 @@ class SearchFlightsViewModel: ObservableObject {
         
     }
     
+//    func clearFlightData() {
+//        flightData = nil
+//    }
+//    
+//    @MainActor private func setFlightData(FlightResponse: Airline?) {
+//        if let data = FlightResponse {
+//            flightData = data
+//        }
+//    }
+//    
     
-    @MainActor private func setAirportData(airportResponse: [Airport]?) {
-        if let data = airportResponse {
-            airportData = data
-        }
-    }
 }
+
