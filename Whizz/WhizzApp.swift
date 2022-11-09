@@ -23,8 +23,8 @@ struct AppView:View{
     var body: some View{
         if(delegate.isAppChannelAvailable){
             if let channel = delegate.appStream {
-//                SearchView(channel: channel)
-                SplashView()
+                HomeView(channel: channel)
+//                SplashView()
             }
         }
         else{

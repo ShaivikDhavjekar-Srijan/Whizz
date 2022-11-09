@@ -9,24 +9,28 @@ import SwiftUI
 
 
 struct HomeView: View {
-    @State private var origin = ""
-    @State private var target = ""
+    
+    @StateObject var model:SearchFlightsViewModel
+    
+    init(channel:AppChannel){
+        _model = StateObject(wrappedValue: SearchFlightsViewModel(appChannel: channel))
+    }
+    
+    @State private var from: String = ""
+    @State private var to: String = ""
     @State private var DOB = Date()
     @State private var DOBString = ""
+    @State var isFromSearchViewShowing: Bool = false
+    @State var isToSearchViewShowing: Bool = false
     
     var body: some View {
-        
-   
-        
-        
+
         ZStack(alignment: .top) {
             
-            
-                Color.black.edgesIgnoringSafeArea(.all)
+            Color.black.edgesIgnoringSafeArea(.all)
             
             GifImageView("AirplaneGif")
                 .frame(width:UIScreen.main.bounds.width*0.8, height: 233)
-            
             
             VStack{
                
@@ -39,17 +43,41 @@ struct HomeView: View {
                             GroupBox{
                                 HStack{
                                     
-                                    TextField("from", text: $origin)
-                                        .frame(height: 60.0)
+                                    Button {
+                                        isFromSearchViewShowing.toggle()
+                                    } label: {
+                                        if from == "" {
+                                            Text("FROM")
+                                        } else {
+                                            Text(from)
+                                        }
+                                    }
+                                    .frame(width: 150, height: 60.0)
+                                    .foregroundColor(.black).opacity(0.4)
+                                    
+//                                    TextField("from", text: $origin)
+//                                        .frame(height: 60.0)
 
 
                                     Rectangle()
                                         .fill(.black)
                                         .frame(width:1,height:25)
                                         .opacity(0.4)
+                                    
+                                    Button {
+                                        isToSearchViewShowing.toggle()
+                                    } label: {
+                                        if to == "" {
+                                            Text("TO")
+                                        } else {
+                                            Text(to)
+                                        }
+                                    }
+                                    .frame(width: 150, height: 60.0)
+                                    .foregroundColor(.black).opacity(0.4)
 
-                                    TextField("Where to?", text: $target)
-                                        .frame(height: 60.0)
+//                                    TextField("Where to?", text: $target)
+//                                        .frame(height: 60.0)
 
                                 }
                                 DOBView(date:$DOB,dob:$DOBString)
@@ -78,23 +106,19 @@ struct HomeView: View {
 
             }
             .frame(width:UIScreen.main.bounds.width*0.8)
-            
-            
-            
+
         }
-        
-        
-        
- 
+        .sheet(isPresented: $isFromSearchViewShowing, content: {
+            SearchView(bindingQuery: $from, model: model)
+        })
+        .sheet(isPresented: $isToSearchViewShowing, content: {
+            SearchView(bindingQuery: $to, model: model)
+        })
     }
 }
 
-
-
-
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(channel: AppChannelActor())
     }
 }

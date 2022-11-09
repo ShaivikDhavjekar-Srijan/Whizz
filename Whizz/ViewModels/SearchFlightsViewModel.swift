@@ -82,6 +82,9 @@ class SearchFlightsViewModel: ObservableObject {
         
     }
     
+    func clearAirportData() {
+        airportData = nil
+    }
     
     @MainActor private func UpdateSearchFlightsUiMessage(message:SearchFlightsUiMessage, showAlert:Bool){
         self.searchFlightsUiMessage = message
