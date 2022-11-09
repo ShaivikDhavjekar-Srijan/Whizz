@@ -20,8 +20,8 @@ struct HomeView: View {
     @State private var to: String = ""
     @State private var DOB = Date()
     @State private var DOBString = ""
-    @State var isFromSearchViewShowing: Bool = false
-    @State var isToSearchViewShowing: Bool = false
+    @State var isSearchFromViewShowing: Bool = false
+    @State var isSearchToViewShowing: Bool = false
     
     var body: some View {
 
@@ -44,7 +44,7 @@ struct HomeView: View {
                                 HStack{
                                     
                                     Button {
-                                        isFromSearchViewShowing.toggle()
+                                        isSearchFromViewShowing.toggle()
                                     } label: {
                                         if from == "" {
                                             Text("FROM")
@@ -65,7 +65,7 @@ struct HomeView: View {
                                         .opacity(0.4)
                                     
                                     Button {
-                                        isToSearchViewShowing.toggle()
+                                        isSearchToViewShowing.toggle()
                                     } label: {
                                         if to == "" {
                                             Text("TO")
@@ -108,12 +108,13 @@ struct HomeView: View {
             .frame(width:UIScreen.main.bounds.width*0.8)
 
         }
-        .sheet(isPresented: $isFromSearchViewShowing, content: {
-            SearchView(bindingQuery: $from, model: model)
-        })
-        .sheet(isPresented: $isToSearchViewShowing, content: {
-            SearchView(bindingQuery: $to, model: model)
-        })
+        //Trailing Closures
+        .sheet(isPresented: $isSearchFromViewShowing) {
+            SearchView(bindingQuery: $from, dismissSearchView: $isSearchFromViewShowing, model: model)
+        }
+        .sheet(isPresented: $isSearchToViewShowing) {
+            SearchView(bindingQuery: $to, dismissSearchView: $isSearchToViewShowing, model: model)
+        }
     }
 }
 
