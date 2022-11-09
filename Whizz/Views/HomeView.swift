@@ -18,8 +18,8 @@ struct HomeView: View {
     
     @State private var from: String = ""
     @State private var to: String = ""
-    @State private var DOB = Date()
-    @State private var DOBString = ""
+    @State private var departure = Date()
+    @State private var departureString = ""
     @State var isSearchFromViewShowing: Bool = false
     @State var isSearchToViewShowing: Bool = false
     
@@ -80,7 +80,7 @@ struct HomeView: View {
 //                                        .frame(height: 60.0)
 
                                 }
-                                DOBView(date:$DOB,dob:$DOBString)
+                                DateView(date:$departure,dateString:$departureString)
                                     .frame(height:60.0)
     
 

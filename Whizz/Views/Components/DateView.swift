@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct DOBView:View{
+struct DateView:View{
     @State var showPicker: Bool = false
     @Binding var date:Date
-    @Binding var dob:String
+    @Binding var dateString:String
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
@@ -29,14 +29,14 @@ struct DOBView:View{
                // .background(Color.clear)
         }
             VStack{
-                TextField("DOB", text:$dob)
+                TextField("DEPARTURE", text:$dateString)
                
             }.allowsHitTesting(false)
             
         }.hiddenNavigationBarStyle()
             .frame(width: UIScreen.main.bounds.width*0.8, height: 60.0)
             .sheet(isPresented: $showPicker, onDismiss: {
-                dob = dateFormatter.string(from: date)
+                dateString = dateFormatter.string(from: date)
             }, content: {
                 CusDatePicker(currentDate: $date)
                     .background(.black)

@@ -90,9 +90,10 @@ struct SearchView: View {
                 }
                 .frame(width: geometry.size.width, height:geometry.size.height*0.85)
             }
-            .onDisappear(perform: {
+            //Trailing Closures
+            .onDisappear(){
                 model.clearAirportData()
-            })
+            }
         }
         
     }
