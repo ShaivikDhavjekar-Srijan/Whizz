@@ -11,6 +11,12 @@ enum SearchFlightsUiMessage: Equatable {
     case ShowQueryIsEmptyAlert
     case ShowInvalidQueryAlert
     case ShowFailedGetAirportDataAlert(error: String)
+    
+    case ShowFromFeildEmptyAlert
+    case ShowToFeildEmptyAlert
+    case ShowDepartureFieldEmptyAlert
+    case ShowFailedGetFligthDataAlert(error: String)
+    
 }
 
 class SearchFlightsViewModel: ObservableObject {
@@ -19,6 +25,8 @@ class SearchFlightsViewModel: ObservableObject {
     
     @Published private(set) var searchFlightsUiMessage: SearchFlightsUiMessage?
     @Published private(set) var airportData: [Airport]?
+    @Published var showAlert: Bool = false
+   // @Published private(set) var flightData:
     
     init(appChannel:AppChannel){
         self.appChannel = appChannel
@@ -54,6 +62,33 @@ class SearchFlightsViewModel: ObservableObject {
             }
         }
     }
+    
+    
+    func getFlightData(from: String, to: String, departure: String) async throws{
+        if(from.isEmpty) {
+            await UpdateSearchFlightsUiMessage(message:.ShowFromFeildEmptyAlert, showAlert: true)
+            return
+        }
+        if(to.isEmpty) {
+            await UpdateSearchFlightsUiMessage(message:.ShowToFeildEmptyAlert, showAlert: true)
+            return
+        }
+        if(departure.isEmpty) {
+            await UpdateSearchFlightsUiMessage(message:.ShowDepartureFieldEmptyAlert, showAlert: true)
+            return
+        }
+        
+       // let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+        
+    }
+    
+    
+    @MainActor private func UpdateSearchFlightsUiMessage(message:SearchFlightsUiMessage, showAlert:Bool){
+        self.searchFlightsUiMessage = message
+        self.showAlert = showAlert
+        
+    }
+    
     
     @MainActor private func setAirportData(airportResponse: [Airport]?) {
         if let data = airportResponse {
