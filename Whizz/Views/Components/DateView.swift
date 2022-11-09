@@ -13,7 +13,7 @@ struct DateView:View{
     @Binding var dateString:String
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }
     
@@ -21,13 +21,12 @@ struct DateView:View{
         ZStack{
             Button{
                 showPicker.toggle()
+            } label: {
+                Text("")
+                    .frame(height: 60.0)
+                    .frame(width:UIScreen.main.bounds.width*0.8)
+//                    .background(Color.clear)
             }
-        label: {
-            Text("")
-                .frame(height: 60.0)
-                .frame(width:UIScreen.main.bounds.width*0.8)
-               // .background(Color.clear)
-        }
             VStack{
                 TextField("DEPARTURE", text:$dateString)
                

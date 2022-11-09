@@ -49,10 +49,13 @@ struct HomeView: View {
                                         if from == "" {
                                             Text("FROM")
                                         } else {
-                                            Text(from)
+                                            VStack(spacing: 7) {
+                                                Text("FROM").font(.system(.caption))
+                                                Text(from).font(.system(size: 20))
+                                            }
                                         }
                                     }
-                                    .frame(width: 150, height: 60.0)
+                                    .frame(width: 150, height:70.0)
                                     .foregroundColor(.black).opacity(0.4)
                                     
 //                                    TextField("from", text: $origin)
@@ -61,7 +64,7 @@ struct HomeView: View {
 
                                     Rectangle()
                                         .fill(.black)
-                                        .frame(width:1,height:25)
+                                        .frame(width:1,height:30)
                                         .opacity(0.4)
                                     
                                     Button {
@@ -70,10 +73,13 @@ struct HomeView: View {
                                         if to == "" {
                                             Text("TO")
                                         } else {
-                                            Text(to)
+                                            VStack(spacing: 7) {
+                                                Text("TO").font(.system(.caption))
+                                                Text(to).font(.system(size: 20))
+                                            }
                                         }
                                     }
-                                    .frame(width: 150, height: 60.0)
+                                    .frame(width: 150, height: 70.0)
                                     .foregroundColor(.black).opacity(0.4)
 
 //                                    TextField("Where to?", text: $target)
