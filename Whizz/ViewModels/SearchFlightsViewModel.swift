@@ -78,7 +78,7 @@ class SearchFlightsViewModel: ObservableObject {
             return
         }
         
-       // let searchFlightsState = CompletableDeferred<SearchFlightsState>()
+        let searchFlightsState = CompletableDeferred<SearchFlightsState>()
         
     }
     

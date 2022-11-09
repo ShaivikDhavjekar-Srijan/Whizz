@@ -29,6 +29,7 @@ struct GetAirportDataResponse: Codable, Equatable {
     }
 }
 
+
 struct Airport: Codable, Equatable {
     let iataCode, name, city, country: String?
     
