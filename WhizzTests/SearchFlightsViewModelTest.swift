@@ -75,6 +75,41 @@ class SearchFlightsViewModelTest: XCTestCase {
         }.store(in: &cancellables)
     }
     
+    func testItShouldShowErrorMessageOnFailedGetAirportData() async throws {
+        // Given
+        actor TestChannel : AppChannel {
+            var searchFlightsState: SearchFlightsState? = nil
+            
+            func send(message: AppMessage) {
+                switch(message){
+                case SearchFlightsMessage.GetAirportData(query: _):
+                    searchFlightsState = .GetAirportDataFailure(error: "Failed to Fetch Airport Data")
+                case SearchFlightsMessage.GetSearchFlightsState(let completableDeferred):
+                    Task {
+                        await completableDeferred.resume(value:searchFlightsState!)
+                    }
+                default:
+                    break
+                }
+            }
+            
+            func read() async -> AppMessage? {
+                return nil
+            }
+            
+        }
+        
+        // When
+        let searchFlightsViewModel = SearchFlightsViewModel(appChannel: TestChannel())
+        try await searchFlightsViewModel.getAirportData(query: self.query)
+        
+        // Then
+        // Test what the SearchFlightsUIMessage will be
+        let _ = searchFlightsViewModel.$searchFlightsUiMessage.sink { state in
+            XCTAssertEqual(state, SearchFlightsUiMessage.ShowFailedGetAirportDataAlert(error: "Failed to Fetch Airport Data"))
+        }.store(in: &cancellables)
+    }
+    
     func testItShouldShowEmptyFieldAlertWhenFromIsEmpty() async throws{
         // Given
         actor TestChannel : AppChannel {
@@ -94,7 +129,7 @@ class SearchFlightsViewModelTest: XCTestCase {
         
         //Then
         let _ = searchFlightsViewModel.$searchFlightsUiMessage.sink { state in
-            XCTAssertEqual(state, SearchFlightsUiMessage.ShowFromFeildEmptyAlert)
+            XCTAssertEqual(state, SearchFlightsUiMessage.ShowFromFieldEmptyAlert)
         }.store(in: &cancellables)
         
         
@@ -119,7 +154,7 @@ class SearchFlightsViewModelTest: XCTestCase {
         
         //Then
         let _ = searchFlightsViewModel.$searchFlightsUiMessage.sink { state in
-            XCTAssertEqual(state, SearchFlightsUiMessage.ShowToFeildEmptyAlert)
+            XCTAssertEqual(state, SearchFlightsUiMessage.ShowToFieldEmptyAlert)
         }.store(in: &cancellables)
     }
     

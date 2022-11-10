@@ -12,8 +12,8 @@ enum SearchFlightsUiMessage: Equatable {
     case ShowInvalidQueryAlert
     case ShowFailedGetAirportDataAlert(error: String)
     
-    case ShowFromFeildEmptyAlert
-    case ShowToFeildEmptyAlert
+    case ShowFromFieldEmptyAlert
+    case ShowToFieldEmptyAlert
     case ShowDepartureFieldEmptyAlert
     case ShowFailedGetFligthDataAlert(error: String)
     
@@ -67,11 +67,11 @@ class SearchFlightsViewModel: ObservableObject {
     
     func getFlightData(from: String, to: String, departure: String) async throws{
         if(from.isEmpty) {
-            await UpdateSearchFlightsUiMessage(message:.ShowFromFeildEmptyAlert, showAlert: true)
+            await UpdateSearchFlightsUiMessage(message:.ShowFromFieldEmptyAlert, showAlert: true)
             return
         }
         if(to.isEmpty) {
-            await UpdateSearchFlightsUiMessage(message:.ShowToFeildEmptyAlert, showAlert: true)
+            await UpdateSearchFlightsUiMessage(message:.ShowToFieldEmptyAlert, showAlert: true)
             return
         }
         if(departure.isEmpty) {
