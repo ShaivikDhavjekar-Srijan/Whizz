@@ -87,7 +87,8 @@ struct HomeView: View {
 
                                 }
                                 DateView(date:$departure,dateString:$departureString)
-                                    .frame(height:60.0)
+                                    .frame(height:70.0)
+                                    .foregroundColor(.black).opacity(0.4)
     
 
                             }label: {

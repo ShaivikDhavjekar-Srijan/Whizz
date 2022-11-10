@@ -23,13 +23,19 @@ struct DateView:View{
                 showPicker.toggle()
             } label: {
                 Text("")
-                    .frame(height: 60.0)
+                    .frame(height: 70.0)
                     .frame(width:UIScreen.main.bounds.width*0.8)
 //                    .background(Color.clear)
             }
-            VStack{
-                TextField("DEPARTURE", text:$dateString)
-               
+            VStack(spacing: 7) {
+                if dateString == "" {
+                    Text("DEPARTURE")
+                } else {
+                    VStack(spacing: 7) {
+                        Text("DEPARTURE").font(.system(.caption))
+                        Text(dateString).font(.system(size: 20))
+                    }
+                }
             }.allowsHitTesting(false)
             
         }.hiddenNavigationBarStyle()
