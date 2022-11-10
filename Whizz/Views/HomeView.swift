@@ -22,6 +22,8 @@ struct HomeView: View {
             return "Please enter the flight departure location."
         case .ShowToFieldEmptyAlert:
             return "Please enter the flight arrival location."
+        case .ShowToAndFromSimilarAlert:
+            return "The departure and arrival locations are the same."
         case .ShowDepartureFieldEmptyAlert:
             return "Please enter the flight departure date."
         case .ShowFailedGetFligthDataAlert(error: let error):
@@ -32,8 +34,8 @@ struct HomeView: View {
         return ""
     }
     
-    @State private var from: String = ""
-    @State private var to: String = ""
+    @State private var from: Airport = Airport(iataCode: "", name: "", city: "", country: "")
+    @State private var to: Airport = Airport(iataCode: "", name: "", city: "", country: "")
     @State private var departure = Date()
     @State private var departureString = ""
     @State var isSearchFromViewShowing: Bool = false
@@ -66,12 +68,12 @@ struct HomeView: View {
                                 Button {
                                     isSearchFromViewShowing.toggle()
                                 } label: {
-                                    if from == "" {
+                                    if (from.iataCode == "") {
                                         Text("FROM")
                                     } else {
                                         VStack(spacing: 7) {
                                             Text("FROM").font(.system(.caption))
-                                            Text(from).font(.system(size: 20))
+                                            Text("\(from.city!), \(from.country!)").font(.system(size: 20))
                                         }
                                     }
                                 }
@@ -86,12 +88,12 @@ struct HomeView: View {
                                 Button {
                                     isSearchToViewShowing.toggle()
                                 } label: {
-                                    if to == "" {
+                                    if (to.iataCode == "") {
                                         Text("TO")
                                     } else {
                                         VStack(spacing: 7) {
                                             Text("TO").font(.system(.caption))
-                                            Text(to).font(.system(size: 20))
+                                            Text("\(to.city!), \(to.country!)").font(.system(size: 20))
                                         }
                                     }
                                 }
@@ -131,10 +133,10 @@ struct HomeView: View {
                 }
                 //Trailing Closures
                 .sheet(isPresented: $isSearchFromViewShowing) {
-                    SearchView(bindingQuery: $from, dismissSearchView: $isSearchFromViewShowing, model: model)
+                    SearchView(result: $from, dismissSearchView: $isSearchFromViewShowing, model: model)
                 }
                 .sheet(isPresented: $isSearchToViewShowing) {
-                    SearchView(bindingQuery: $to, dismissSearchView: $isSearchToViewShowing, model: model)
+                    SearchView(result: $to, dismissSearchView: $isSearchToViewShowing, model: model)
                 }
                 .alert(isPresented: $model.showAlert) {
                     return Alert(title: Text("Whizz"), message: Text(self.statusMessage ?? ""), dismissButton: .default(Text("OK")))
@@ -142,7 +144,8 @@ struct HomeView: View {
             }
             
             if model.isFlightDataLoading {
-                ProgressView()
+                LoadingView()
+                    .frame(height: UIScreen.main.bounds.size.height)
             }
         }
     }

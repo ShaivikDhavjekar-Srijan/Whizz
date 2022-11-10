@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @Binding var bindingQuery: String
+    @Binding var result: Airport
     @Binding var dismissSearchView: Bool
     @ObservedObject var model:SearchFlightsViewModel
     
@@ -97,7 +97,7 @@ struct SearchView: View {
                                             .background(Color("ComponentColor"))
                                             .cornerRadius(17)
                                             .onTapGesture {
-                                                bindingQuery = airport.city ?? "Failed"
+                                                result = airport
                                                 dismissSearchView = false
                                             }
                                         }

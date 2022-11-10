@@ -14,8 +14,8 @@ class SearchFlightsViewModelTest: XCTestCase {
     private var cancellables: Set<AnyCancellable> = []
     
     let query = "india"
-    let from = "India"
-    let to = "China"
+    let from = "BOM"
+    let to = "DEL"
     let departure = "2022-11-08T08"
 
     override func setUpWithError() throws {
@@ -156,6 +156,31 @@ class SearchFlightsViewModelTest: XCTestCase {
         let _ = searchFlightsViewModel.$searchFlightsUiMessage.sink { state in
             XCTAssertEqual(state, SearchFlightsUiMessage.ShowToFieldEmptyAlert)
         }.store(in: &cancellables)
+    }
+    
+    func testItShouldShowToAndDromSimilarAlertWhenToAndFromAreSame() async throws{
+        // Given
+        actor TestChannel : AppChannel {
+            func send(message: AppMessage) {
+                
+            }
+            
+            func read() async -> AppMessage? {
+                return nil
+            }
+            
+        }
+        
+        // When
+        let searchFlightsViewModel = SearchFlightsViewModel(appChannel: TestChannel())
+        try await searchFlightsViewModel.getFlightData(from: "DEL", to: "DEL", departure: self.departure)
+        
+        //Then
+        let _ = searchFlightsViewModel.$searchFlightsUiMessage.sink { state in
+            XCTAssertEqual(state, SearchFlightsUiMessage.ShowFromFieldEmptyAlert)
+        }.store(in: &cancellables)
+        
+        
     }
     
     func testItShouldShowEmptyFieldAlertWhenDepartureIsEmpty() async throws{
