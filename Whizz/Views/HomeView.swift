@@ -31,6 +31,7 @@ struct HomeView: View {
             
             GifImageView("AirplaneGif")
                 .frame(width:UIScreen.main.bounds.width*0.8, height: 233)
+                .allowsHitTesting(false)
             
             VStack{
                

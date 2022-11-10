@@ -22,6 +22,8 @@ struct GifImageView: UIViewRepresentable {
         
         webView.load(data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: url.deletingLastPathComponent())
         
+        webView.scrollView.isScrollEnabled = false
+        
         return webView
     }
     
@@ -32,8 +34,8 @@ struct GifImageView: UIViewRepresentable {
     typealias UIViewType = WKWebView
 }
 
-struct GifImageView_Previews: PreviewProvider {
-    static var previews: some View {
-        GifImageView("HomeViewGif")
-    }
-}
+//struct GifImageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GifImageView("HomeViewGif")
+//    }
+//}
