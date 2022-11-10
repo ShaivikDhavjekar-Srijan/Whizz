@@ -13,6 +13,20 @@ struct SearchView: View {
     @Binding var dismissSearchView: Bool
     @ObservedObject var model:SearchFlightsViewModel
     
+    private var statusMessage:String? {
+        switch model.searchFlightsUiMessage{
+        case .ShowQueryIsEmptyAlert:
+            return "Please enter a query"
+        case .ShowInvalidQueryAlert:
+            return "Please enter a valid query"
+        case .ShowFailedGetAirportDataAlert(error: let error):
+            return "\(error)"
+        default:
+            break
+        }
+        return ""
+    }
+    
     @FocusState private var isFocused: Bool
     @State private var query = ""
     
@@ -52,46 +66,49 @@ struct SearchView: View {
                 .background(.black)
                 
                 ZStack {
-                    if model.airportData != nil {
-                        if model.airportData == [] {
-                            Text("Sorry! No result found :(")
-                        } else {
-                            VStack(spacing: 10) {
-                                ForEach(model.airportData!, id: \.name) { airport in
-                                    if (airport.city != nil) {
-                                        HStack {
-                                            VStack(alignment: .leading) {
-                                                Text(airport.name!)
-                                                    .font(.headline)
-                                                Text("\(airport.city!), \( airport.country!)")
-                                                    .font(.subheadline)
+                    if model.isAirportDataLoading {
+                        ProgressView()
+                            .scaleEffect(1.5, anchor: .center)
+                    } else {
+                        if model.airportData != nil {
+                            if model.airportData == [] {
+                                Text("Sorry! No results found :(")
+                                    .opacity(0.4)
+                                    .font(.system(size: 25))
+                            } else {
+                                VStack(spacing: 10) {
+                                    ForEach(model.airportData!, id: \.name) { airport in
+                                        if (airport.city != nil) {
+                                            HStack {
+                                                VStack(alignment: .leading) {
+                                                    Text(airport.name!)
+                                                        .font(.headline)
+                                                    Text("\(airport.city!), \( airport.country!)")
+                                                        .font(.subheadline)
+                                                }
+                                                Spacer()
+                                                Text(airport.iataCode!)
+                                                    .fontWeight(.bold)
+                                                    .font(.system(size: 32))
                                             }
-                                            Spacer()
-                                            Text(airport.iataCode!)
-                                                .fontWeight(.bold)
-                                                .font(.system(size: 32))
-                                        }
-                                        .frame(width: geometry.size.width*0.8, height: 90)
-                                        .padding(.horizontal, 20)
-                                        .background(.thickMaterial)
-                                        .background(Color("ComponentColor"))
-                                        .cornerRadius(17)
-                                        .onTapGesture {
-                                            bindingQuery = airport.city ?? "Failed"
-                                            dismissSearchView = false
+                                            .frame(width: geometry.size.width*0.8, height: 90)
+                                            .padding(.horizontal, 20)
+                                            .background(.thickMaterial)
+                                            .background(Color("ComponentColor"))
+                                            .cornerRadius(17)
+                                            .onTapGesture {
+                                                bindingQuery = airport.city ?? "Failed"
+                                                dismissSearchView = false
+                                            }
                                         }
                                     }
+                                    Spacer()
                                 }
-                                Spacer()
                             }
-                        }
-                    } else {
-                        if model.searchFlightsUiMessage == .ShowQueryIsEmptyAlert {
-                            Text("The Query is Empty")
-                        } else if model.searchFlightsUiMessage == .ShowInvalidQueryAlert {
-                            Text("Invalid Query")
                         } else {
                             Text("What are you searching for?")
+                                .opacity(0.4)
+                                .font(.system(size: 25))
                         }
                     }
                 }
@@ -99,7 +116,10 @@ struct SearchView: View {
             }
             //Trailing Closures
             .onDisappear(){
-                model.clearAirportData()
+                model.clearSearchData()
+            }
+            .alert(isPresented: $model.showAlert) {
+                return Alert(title: Text("Whizz"), message: Text(self.statusMessage ?? ""), dismissButton: .default(Text("OK")))
             }
         }
         

@@ -16,8 +16,8 @@ let backgroundGradient = LinearGradient(
 struct DetailView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
-                   backgroundGradient
-                       .ignoresSafeArea()
+//                   backgroundGradient
+//                       .ignoresSafeArea()
             VStack(alignment: .leading) {
                        Text("Boarding Pass")
                            .font(.largeTitle)
