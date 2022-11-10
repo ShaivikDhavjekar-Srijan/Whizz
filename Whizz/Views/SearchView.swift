@@ -13,6 +13,7 @@ struct SearchView: View {
     @Binding var dismissSearchView: Bool
     @ObservedObject var model:SearchFlightsViewModel
     
+    @FocusState private var isFocused: Bool
     @State private var query = ""
     
     var body: some View {
@@ -25,6 +26,12 @@ struct SearchView: View {
                         .padding(.vertical, 10)
                         .background(Color(.white))
                         .cornerRadius(17)
+                        .focused($isFocused)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                self.isFocused = true
+                            }
+                        }
                     
                     Button {
                         UIApplication.shared.hideKeyboard()
