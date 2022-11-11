@@ -73,7 +73,10 @@ struct HomeView: View {
                                     } else {
                                         VStack(spacing: 7) {
                                             Text("FROM").font(.system(.caption))
-                                            Text("\(from.city!), \(from.country!)").font(.system(size: 20))
+                                            if let city = from.city, let country = from.country {
+                                                Text("\(city), \(country)").font(.system(size: 20))
+                                            }
+                                            
                                         }
                                     }
                                 }

@@ -71,22 +71,26 @@ class SearchFlightsViewModel: ObservableObject {
     
     
     func getFlightData(from: Airport, to: Airport, departure: String) async throws{
-        if(from.iataCode!.isEmpty) {
+        guard let from = from.iataCode, !from.isEmpty else {
             await updateSearchFlightsUiMessage(message:.ShowFromFieldEmptyAlert, showAlert: true)
             return
         }
-        if(to.iataCode!.isEmpty) {
+        
+        guard let to = to.iataCode, !to.isEmpty else {
             await updateSearchFlightsUiMessage(message:.ShowToFieldEmptyAlert, showAlert: true)
             return
         }
-        if(from.iataCode! == to.iataCode!) {
+
+        if from == to {
             await updateSearchFlightsUiMessage(message:.ShowToAndFromSimilarAlert, showAlert: true)
             return
         }
+        
         if(departure.isEmpty) {
             await updateSearchFlightsUiMessage(message:.ShowDepartureFieldEmptyAlert, showAlert: true)
             return
         }
+        
         await updateFlightDataLoadingStatus(isFlightDataLoading:true)
         
         
