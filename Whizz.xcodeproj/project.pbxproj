@@ -54,6 +54,7 @@
 		AFA2E12C2918DB95007FD4B1 /* GetFlightDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E12B2918DB95007FD4B1 /* GetFlightDataResponse.swift */; };
 		AFA2E132291A5096007FD4B1 /* SearchFlightsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E131291A5096007FD4B1 /* SearchFlightsViewModelTest.swift */; };
 		AFA2E134291A50A0007FD4B1 /* SearchFlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E133291A50A0007FD4B1 /* SearchFlightsViewModel.swift */; };
+		AFC849BB291E6ADF00A0836A /* BookFlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC849BA291E6ADF00A0836A /* BookFlightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		AFA2E12B2918DB95007FD4B1 /* GetFlightDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlightDataResponse.swift; sourceTree = "<group>"; };
 		AFA2E131291A5096007FD4B1 /* SearchFlightsViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightsViewModelTest.swift; sourceTree = "<group>"; };
 		AFA2E133291A50A0007FD4B1 /* SearchFlightsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFlightsViewModel.swift; sourceTree = "<group>"; };
+		AFC849BA291E6ADF00A0836A /* BookFlightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFlightView.swift; sourceTree = "<group>"; };
 		B6928DA8558DA592A5FCBB9F /* Pods-Whizz-WhizzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whizz-WhizzUITests.release.xcconfig"; path = "Target Support Files/Pods-Whizz-WhizzUITests/Pods-Whizz-WhizzUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBF57F7C0A0C8DFAC2D7D939 /* Pods-WhizzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.release.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhizzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +324,7 @@
 		AFA2E11F2914DAD9007FD4B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AFC849BA291E6ADF00A0836A /* BookFlightView.swift */,
 				2D6499B229152D0300B4DFE8 /* Components */,
 				2DAD52542918E79E00240D43 /* AirplaneGif.gif */,
 				2D7D0EF729198DAD007A5CEF /* DetailView.swift */,
@@ -605,6 +608,7 @@
 				AFA2E1282914FD5C007FD4B1 /* GetAirportDataResponse.swift in Sources */,
 				AFA2E0D42912646F007FD4B1 /* NetworkManager.swift in Sources */,
 				2D6499B529152D0300B4DFE8 /* GroupBoxStyle.swift in Sources */,
+				AFC849BB291E6ADF00A0836A /* BookFlightView.swift in Sources */,
 				AFA2E0E6291264A4007FD4B1 /* AppActor.swift in Sources */,
 				AFA2E0D52912646F007FD4B1 /* NetworkService.swift in Sources */,
 				AFA2E0C1291263AA007FD4B1 /* UIView+Ext.swift in Sources */,
