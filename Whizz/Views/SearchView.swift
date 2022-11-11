@@ -66,7 +66,7 @@ struct SearchView: View {
                 .background(.black)
                 
                 ZStack {
-                    if model.isAirportDataLoading {
+                    if model.isLoading {
                         ProgressView()
                             .scaleEffect(1.5, anchor: .center)
                     } else {

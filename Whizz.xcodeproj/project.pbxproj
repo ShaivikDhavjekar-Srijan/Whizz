@@ -25,6 +25,7 @@
 		47A7FBEA1443945718DF9A92 /* Pods_Whizz_WhizzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */; };
 		540F230A853A0486B9DC1658 /* Pods_WhizzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B59B25B98D09C3DF8313D6 /* Pods_WhizzTests.framework */; };
 		AF0D9CD2291D4071008629C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D9CD1291D4071008629C3 /* LoadingView.swift */; };
+		AF0D9CD4291E3C09008629C3 /* FlightSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D9CD3291E3C09008629C3 /* FlightSearchModel.swift */; };
 		AF964E65291A92160011F5F6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF964E64291A92160011F5F6 /* SearchView.swift */; };
 		AF964E69291AB08D0011F5F6 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF964E67291AB08D0011F5F6 /* UIApplication+Ext.swift */; };
 		AFA2E0BC291263AA007FD4B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2E0B1291263AA007FD4B1 /* Constants.swift */; };
@@ -97,6 +98,7 @@
 		39ECD792EDB7731292DD3CB8 /* Pods-WhizzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhizzTests.debug.xcconfig"; path = "Target Support Files/Pods-WhizzTests/Pods-WhizzTests.debug.xcconfig"; sourceTree = "<group>"; };
 		55AEA678E909F01F7BFC9ED3 /* Pods_Whizz_WhizzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whizz_WhizzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0D9CD1291D4071008629C3 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AF0D9CD3291E3C09008629C3 /* FlightSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchModel.swift; sourceTree = "<group>"; };
 		AF964E64291A92160011F5F6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AF964E67291AB08D0011F5F6 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		AFA2E0AB291263A9007FD4B1 /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			children = (
 				AFA2E1272914FD5C007FD4B1 /* GetAirportDataResponse.swift */,
 				AFA2E12B2918DB95007FD4B1 /* GetFlightDataResponse.swift */,
+				AF0D9CD3291E3C09008629C3 /* FlightSearchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				36CA74A029125E4700955CCE /* WhizzApp.swift in Sources */,
 				AF964E69291AB08D0011F5F6 /* UIApplication+Ext.swift in Sources */,
 				2D7D0EF829198DAD007A5CEF /* DetailView.swift in Sources */,
+				AF0D9CD4291E3C09008629C3 /* FlightSearchModel.swift in Sources */,
 				AFA2E0C5291263AA007FD4B1 /* Enums.swift in Sources */,
 				AFA2E0C9291263AA007FD4B1 /* UserDefaultHelper.swift in Sources */,
 				AFA2E0C3291263AA007FD4B1 /* UITextField+Ext.swift in Sources */,

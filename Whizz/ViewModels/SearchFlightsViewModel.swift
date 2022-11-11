@@ -26,13 +26,10 @@ class SearchFlightsViewModel: ObservableObject {
     
     @Published private(set) var searchFlightsUiMessage: SearchFlightsUiMessage?
     @Published var showAlert: Bool = false
-    @Published private (set) var isAirportDataLoading: Bool = false
-    @Published private (set) var isFlightDataLoading: Bool = false
+    @Published private (set) var isLoading: Bool = false
     
     @Published private(set) var airportData: [Airport]?
-//    @Published private(set) var flightData: Airline?
-    
-   // @Published private(set) var flightData:
+    @Published private(set) var flightSearchModel: FlightSearchModel!
     
     init(appChannel:AppChannel){
         self.appChannel = appChannel
@@ -51,7 +48,7 @@ class SearchFlightsViewModel: ObservableObject {
         }
         
         let searchFlightsState = CompletableDeferred<SearchFlightsState>()
-        await updateAirportDataLoadingStatus(isAirportDataLoading: true)
+        await updateLoadingStatus(isLoading: true)
         await appChannel.send(message: SearchFlightsMessage.GetAirportData(query: query))
         await appChannel.send(message: SearchFlightsMessage.GetSearchFlightsState(searchFlightsState))
         
@@ -59,7 +56,7 @@ class SearchFlightsViewModel: ObservableObject {
             switch (result) {
             case .GetAirportDataSuccess(airportData: let airportData):
                 await setAirportData(airportResponse: airportData.data)
-                await updateAirportDataLoadingStatus(isAirportDataLoading: false)
+                await updateLoadingStatus(isLoading: false)
                 break
             case .GetAirportDataFailure(error: let error):
                 await updateSearchFlightsUiMessage(message:.ShowFailedGetAirportDataAlert(error: error), showAlert: true)
@@ -70,18 +67,18 @@ class SearchFlightsViewModel: ObservableObject {
     }
     
     
-    func getFlightData(from: Airport, to: Airport, departure: String) async throws{
-        guard let from = from.iataCode, !from.isEmpty else {
+    func getFlightData(from: Airport, to: Airport, departure: String) async throws {
+        guard let fromIata = from.iataCode, !fromIata.isEmpty else {
             await updateSearchFlightsUiMessage(message:.ShowFromFieldEmptyAlert, showAlert: true)
             return
         }
         
-        guard let to = to.iataCode, !to.isEmpty else {
+        guard let toIata = to.iataCode, !toIata.isEmpty else {
             await updateSearchFlightsUiMessage(message:.ShowToFieldEmptyAlert, showAlert: true)
             return
         }
 
-        if from == to {
+        if fromIata == toIata {
             await updateSearchFlightsUiMessage(message:.ShowToAndFromSimilarAlert, showAlert: true)
             return
         }
@@ -91,7 +88,7 @@ class SearchFlightsViewModel: ObservableObject {
             return
         }
         
-        await updateFlightDataLoadingStatus(isFlightDataLoading:true)
+        flightSearchModel = FlightSearchModel(from: from, to: to, departure: departure)
         
         
         
@@ -117,7 +114,7 @@ class SearchFlightsViewModel: ObservableObject {
     
     func clearSearchData() {
         searchFlightsUiMessage = nil
-        isAirportDataLoading = false
+        isLoading = false
         airportData = nil
     }
     
@@ -129,29 +126,13 @@ class SearchFlightsViewModel: ObservableObject {
     
     @MainActor private func updateSearchFlightsUiMessage(message:SearchFlightsUiMessage, showAlert:Bool){
         self.searchFlightsUiMessage = message
-        updateAirportDataLoadingStatus(isAirportDataLoading: false)
-        updateFlightDataLoadingStatus(isFlightDataLoading: false)
+        updateLoadingStatus(isLoading: false)
         self.showAlert = showAlert
     }
     
-    @MainActor private func updateAirportDataLoadingStatus(isAirportDataLoading:Bool){
-        self.isAirportDataLoading = isAirportDataLoading
+    @MainActor private func updateLoadingStatus(isLoading:Bool){
+        self.isLoading = isLoading
     }
-    
-    @MainActor private func updateFlightDataLoadingStatus(isFlightDataLoading:Bool){
-        self.isFlightDataLoading = isFlightDataLoading
-    }
-    
-//    func clearFlightData() {
-//        flightData = nil
-//    }
-//    
-//    @MainActor private func setFlightData(FlightResponse: Airline?) {
-//        if let data = FlightResponse {
-//            flightData = data
-//        }
-//    }
-//    
     
 }
 
