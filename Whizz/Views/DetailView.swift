@@ -55,7 +55,7 @@ struct DetailView: View {
                         
                         
                     }.frame(width:UIScreen.main.bounds.width*0.5, height:UIScreen.main.bounds.width*0.6)
-                        .offset(x:-40, y: -95)
+                        .offset(x:-40, y: -85)
                     
                     
                     HStack{
