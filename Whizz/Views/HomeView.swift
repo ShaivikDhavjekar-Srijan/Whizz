@@ -69,37 +69,46 @@ struct HomeView: View {
                             } label: {
                                 if (from.iataCode == "") {
                                     Text("FROM")
+                                        .frame(width: 150, height:70.0)
                                 } else {
                                     VStack(spacing: 7) {
                                         Text("FROM").font(.system(.caption))
                                         if let city = from.city, let country = from.country {
                                             Text("\(city), \(country)").font(.system(size: 20))
                                         }
-                                        
                                     }
+                                    .frame(width: 150, height:70.0)
                                 }
                             }
-                            .frame(width: 150, height:70.0)
                             .foregroundColor(.black).opacity(0.4)
                             
-                            Rectangle()
-                                .fill(.black)
-                                .frame(width:1,height:30)
-                                .opacity(0.4)
+                            if from.iataCode != "" || to.iataCode != "" {
+                                Rectangle()
+                                    .fill(.black)
+                                    .frame(width: 1, height: 60)
+                                    .opacity(0.4)
+                            } else {
+                                Rectangle()
+                                    .fill(.black)
+                                    .frame(width: 1, height: 30)
+                                    .opacity(0.4)
+                            }
+                            
                             
                             Button {
                                 isSearchToViewShowing.toggle()
                             } label: {
                                 if (to.iataCode == "") {
                                     Text("TO")
+                                        .frame(width: 150, height:70.0)
                                 } else {
                                     VStack(spacing: 7) {
                                         Text("TO").font(.system(.caption))
                                         Text("\(to.city!), \(to.country!)").font(.system(size: 20))
                                     }
+                                    .frame(width: 150, height:70.0)
                                 }
                             }
-                            .frame(width: 150, height: 70.0)
                             .foregroundColor(.black).opacity(0.4)
                             
                         }
