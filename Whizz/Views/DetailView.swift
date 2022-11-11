@@ -13,6 +13,8 @@ struct DetailView: View {
             Color.black.edgesIgnoringSafeArea(.all)
             
             VStack {
+               
+                
                 Spacer().frame(height: 60)
                 Text("Boarding Pass")
                     .font(.largeTitle)
@@ -27,7 +29,9 @@ struct DetailView: View {
                     
                     VStack(alignment: .leading) {
                         
+                        Label("Flight name", systemImage: "airplane")
                         
+                        Spacer()
                         Text("ODS")
                             .font(.system(size: 50))
                             .bold()
@@ -50,8 +54,18 @@ struct DetailView: View {
                             .foregroundColor(.black)
                         
                         
-                    }.frame(width:UIScreen.main.bounds.width*0.5, height:UIScreen.main.bounds.width*0.5 )
-                        .offset(x:-34, y: -95)
+                    }.frame(width:UIScreen.main.bounds.width*0.5, height:UIScreen.main.bounds.width*0.6)
+                        .offset(x:-40, y: -85)
+                    
+                    
+                    HStack{
+                        VStack{
+                            Text("10:30 Am \n 29-08-2022")
+                        }
+                        
+                        
+                    }.frame(width:UIScreen.main.bounds.width*0.5, height:UIScreen.main.bounds.width*0.6)
+                        .offset(x:-40, y: 255)
                     
                 }
             }
