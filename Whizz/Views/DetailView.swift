@@ -6,29 +6,57 @@
 //
 
 import SwiftUI
-import AVFoundation
-
-let backgroundGradient = LinearGradient(
-    gradient: Gradient(colors: [Color(UIColor.ComponentColor), Color.black]),
-    startPoint: .top, endPoint: .bottom)
-
 
 struct DetailView: View {
     var body: some View {
-        ZStack(alignment: .topLeading) {
-//                   backgroundGradient
-//                       .ignoresSafeArea()
-            VStack(alignment: .leading) {
-                       Text("Boarding Pass")
-                           .font(.largeTitle)
-                           .bold()
-                           .foregroundColor(.black)
-                       Button("Download Ticket") {
-
-                       }
-                   }
-               }
-               .accentColor(Color.black)
+        ZStack(alignment: .top){
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Spacer().frame(height: 60)
+                Text("Boarding Pass")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+                
+                ZStack{
+                    Image("BoardingPass")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(30)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        
+                        Text("ODS")
+                            .font(.system(size: 50))
+                            .bold()
+                            .foregroundColor(.black)
+                        
+                        Text("Odessa, Ukraine")
+                            .font(.subheadline)
+                            .bold()
+                            .foregroundColor(.black)
+                        
+                        Spacer()
+                        Text("CDG")
+                            .font(.system(size: 50))
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.black)
+                        Text("Paris, France")
+                            .font(.subheadline)
+                            .bold()
+                            .foregroundColor(.black)
+                        
+                        
+                    }.frame(width:UIScreen.main.bounds.width*0.5, height:UIScreen.main.bounds.width*0.5 )
+                        .offset(x:-34, y: -95)
+                    
+                }
+            }
+            
+        }
     }
 }
 
