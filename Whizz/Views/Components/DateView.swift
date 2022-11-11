@@ -53,7 +53,7 @@ struct CusDatePicker: View {
     @Binding var currentDate: Date
     
     var body: some View {
-        DatePicker("", selection: $currentDate, displayedComponents: [.date]).labelsHidden().datePickerStyle(GraphicalDatePickerStyle()).background(.black)
+        DatePicker("", selection: $currentDate, in: Date()... ,displayedComponents: [.date]).labelsHidden().datePickerStyle(GraphicalDatePickerStyle()).background(.black)
         
     }
 }
