@@ -206,6 +206,40 @@ class SearchFlightsViewModelTest: XCTestCase {
         }.store(in: &cancellables)
     }
     
-    // func testItShouldShowFailedGetFligthDataAlert() async throws
+    func testItShouldShowFailedGetFligthDataAlert() async throws{
+            
+            actor TestChannel : AppChannel {
+                var SearchFlightsState:SearchFlightsState? = nil
+                
+                func send(message: AppMessage) {
+                    switch(message){
+                    case SearchFlightsMessage.GetFlightData(from: _, to: _, departure: _):
+                        SearchFlightsState = .GetFlightDataFailure(error: "Failed to Featch Flight Data")
+                    case SearchFlightsMessage.GetSearchFlightsState(let completable):
+                        Task{
+                            await completable.resume(value: SearchFlightsState!)
+                        }
+                    default:
+                        break
+                    }
+                }
+                
+                func read() async -> AppMessage? {
+                    return nil
+                }
+       
+            }
+            // When
+            let searchFlightsViewModel = SearchFlightsViewModel(appChannel: TestChannel())
+            try await searchFlightsViewModel.getFlightData(from: from, to: to, departure: departure)
+            
+            // Then
+            // Test what the SearchFlightsUIMessage will be
+            let _ = searchFlightsViewModel.$searchFlightsUiMessage.sink { state in
+                XCTAssertEqual(state, SearchFlightsUiMessage.ShowFailedGetFligthDataAlert(error: "Failed to Fetch Flight Data"))
+            }.store(in: &cancellables)
+            
+        }
+
 
 }
